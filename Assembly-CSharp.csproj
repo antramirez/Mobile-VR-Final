@@ -59,12 +59,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Final_Project\Scripts\Billboard.cs" />
+    <Compile Include="Assets\Final_Project\Scripts\BallPosition.cs" />
     <Compile Include="Assets\Final_Project\Scripts\Bullet.cs" />
     <Compile Include="Assets\Final_Project\Scripts\EnemyMoveAndShoot.cs" />
     <Compile Include="Assets\Final_Project\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Final_Project\Scripts\Health.cs" />
     <Compile Include="Assets\Final_Project\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Final_Project\Scripts\SpawnHoops.cs" />
     <Compile Include="Assets\ThirdParty\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\ThirdParty\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
     <Compile Include="Assets\ThirdParty\GoogleVR\Demos\Scripts\HelloVR\HeadsetDemoManager.cs" />
