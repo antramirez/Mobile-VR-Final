@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile-VR-Final", "Assembly-CSharp.csproj", "{99F968E0-E654-E303-E174-C8F909206756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile-VR-Final", "Assembly-CSharp-Editor.csproj", "{DC8C9CED-8C0D-9000-48B8-070DCDC4DDAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99F968E0-E654-E303-E174-C8F909206756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F968E0-E654-E303-E174-C8F909206756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F968E0-E654-E303-E174-C8F909206756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F968E0-E654-E303-E174-C8F909206756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8C9CED-8C0D-9000-48B8-070DCDC4DDAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8C9CED-8C0D-9000-48B8-070DCDC4DDAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8C9CED-8C0D-9000-48B8-070DCDC4DDAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8C9CED-8C0D-9000-48B8-070DCDC4DDAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
