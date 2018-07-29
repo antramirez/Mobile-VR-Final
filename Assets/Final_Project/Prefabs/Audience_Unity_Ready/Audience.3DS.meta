@@ -1,0 +1,281 @@
+fileFormatVersion: 2
+guid: 70c61f0cd2de2463089d043b60af90aa
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Audience
+    100004: Bip008
+    100006: Bip008 Foo
+    100008: Bip008 He0
+    100010: Bip008 Hea
+    100012: Bip008 L 0
+    100014: Bip008 L 1
+    100016: Bip008 L 2
+    100018: Bip008 L 3
+    100020: Bip008 L 4
+    100022: Bip008 L 5
+    100024: Bip008 L 6
+    100026: Bip008 L 7
+    100028: Bip008 L 8
+    100030: Bip008 L 9
+    100032: Bip008 L C
+    100034: Bip008 L F
+    100036: Bip008 L H
+    100038: Bip008 L T
+    100040: Bip008 L U
+    100042: Bip008 Nec
+    100044: Bip008 Pel
+    100046: Bip008 R 0
+    100048: Bip008 R 1
+    100050: Bip008 R 2
+    100052: Bip008 R 3
+    100054: Bip008 R 4
+    100056: Bip008 R 5
+    100058: Bip008 R 6
+    100060: Bip008 R 7
+    100062: Bip008 R 8
+    100064: Bip008 R 9
+    100066: Bip008 R C
+    100068: Bip008 R F
+    100070: Bip008 R H
+    100072: Bip008 R T
+    100074: Bip008 R U
+    100076: Bip008 Sp0
+    100078: Bip008 Spi
+    400000: //RootNode
+    400002: Audience
+    400004: Bip008
+    400006: Bip008 Foo
+    400008: Bip008 He0
+    400010: Bip008 Hea
+    400012: Bip008 L 0
+    400014: Bip008 L 1
+    400016: Bip008 L 2
+    400018: Bip008 L 3
+    400020: Bip008 L 4
+    400022: Bip008 L 5
+    400024: Bip008 L 6
+    400026: Bip008 L 7
+    400028: Bip008 L 8
+    400030: Bip008 L 9
+    400032: Bip008 L C
+    400034: Bip008 L F
+    400036: Bip008 L H
+    400038: Bip008 L T
+    400040: Bip008 L U
+    400042: Bip008 Nec
+    400044: Bip008 Pel
+    400046: Bip008 R 0
+    400048: Bip008 R 1
+    400050: Bip008 R 2
+    400052: Bip008 R 3
+    400054: Bip008 R 4
+    400056: Bip008 R 5
+    400058: Bip008 R 6
+    400060: Bip008 R 7
+    400062: Bip008 R 8
+    400064: Bip008 R 9
+    400066: Bip008 R C
+    400068: Bip008 R F
+    400070: Bip008 R H
+    400072: Bip008 R T
+    400074: Bip008 R U
+    400076: Bip008 Sp0
+    400078: Bip008 Spi
+    2100000: A
+    2300000: Audience
+    2300002: Bip008
+    2300004: Bip008 He0
+    2300006: Bip008 Hea
+    2300008: Bip008 L 0
+    2300010: Bip008 L 1
+    2300012: Bip008 L 2
+    2300014: Bip008 L 3
+    2300016: Bip008 L 4
+    2300018: Bip008 L 5
+    2300020: Bip008 L 6
+    2300022: Bip008 L 7
+    2300024: Bip008 L 8
+    2300026: Bip008 L 9
+    2300028: Bip008 L C
+    2300030: Bip008 L F
+    2300032: Bip008 L H
+    2300034: Bip008 L T
+    2300036: Bip008 L U
+    2300038: Bip008 Nec
+    2300040: Bip008 Pel
+    2300042: Bip008 R 0
+    2300044: Bip008 R 1
+    2300046: Bip008 R 2
+    2300048: Bip008 R 3
+    2300050: Bip008 R 4
+    2300052: Bip008 R 5
+    2300054: Bip008 R 6
+    2300056: Bip008 R 7
+    2300058: Bip008 R 8
+    2300060: Bip008 R 9
+    2300062: Bip008 R C
+    2300064: Bip008 R F
+    2300066: Bip008 R H
+    2300068: Bip008 R T
+    2300070: Bip008 R U
+    2300072: Bip008 Sp0
+    2300074: Bip008 Spi
+    3300000: Audience
+    3300002: Bip008
+    3300004: Bip008 He0
+    3300006: Bip008 Hea
+    3300008: Bip008 L 0
+    3300010: Bip008 L 1
+    3300012: Bip008 L 2
+    3300014: Bip008 L 3
+    3300016: Bip008 L 4
+    3300018: Bip008 L 5
+    3300020: Bip008 L 6
+    3300022: Bip008 L 7
+    3300024: Bip008 L 8
+    3300026: Bip008 L 9
+    3300028: Bip008 L C
+    3300030: Bip008 L F
+    3300032: Bip008 L H
+    3300034: Bip008 L T
+    3300036: Bip008 L U
+    3300038: Bip008 Nec
+    3300040: Bip008 Pel
+    3300042: Bip008 R 0
+    3300044: Bip008 R 1
+    3300046: Bip008 R 2
+    3300048: Bip008 R 3
+    3300050: Bip008 R 4
+    3300052: Bip008 R 5
+    3300054: Bip008 R 6
+    3300056: Bip008 R 7
+    3300058: Bip008 R 8
+    3300060: Bip008 R 9
+    3300062: Bip008 R C
+    3300064: Bip008 R F
+    3300066: Bip008 R H
+    3300068: Bip008 R T
+    3300070: Bip008 R U
+    3300072: Bip008 Sp0
+    3300074: Bip008 Spi
+    4300000: Bip008
+    4300002: Bip008 Pel
+    4300004: Bip008 Spi
+    4300006: Bip008 L T
+    4300008: Bip008 L C
+    4300010: Bip008 L F
+    4300012: Bip008 L 0
+    4300014: Bip008 L 1
+    4300016: Bip008 R T
+    4300018: Bip008 R C
+    4300020: Bip008 R F
+    4300022: Bip008 R 0
+    4300024: Bip008 R 1
+    4300026: Bip008 Sp0
+    4300028: Bip008 Nec
+    4300030: Bip008 L 2
+    4300032: Bip008 L U
+    4300034: Bip008 L 3
+    4300036: Bip008 L H
+    4300038: Bip008 L 4
+    4300040: Bip008 L 5
+    4300042: Bip008 L 6
+    4300044: Bip008 L 7
+    4300046: Bip008 L 8
+    4300048: Bip008 L 9
+    4300050: Bip008 R 2
+    4300052: Bip008 R U
+    4300054: Bip008 R 3
+    4300056: Bip008 R H
+    4300058: Bip008 R 4
+    4300060: Bip008 R 5
+    4300062: Bip008 R 6
+    4300064: Bip008 R 7
+    4300066: Bip008 R 8
+    4300068: Bip008 R 9
+    4300070: Bip008 Hea
+    4300072: Bip008 He0
+    4300074: Audience
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
