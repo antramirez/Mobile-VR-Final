@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e860d1fe2a57f4de7a5862d1efa7f1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1309095814981100, guid: ff920d46bb1c8446c9e579f4c44038b7, type: 2}
+  ball: {fileID: 1309095814981100, guid: ff920d46bb1c8446c9e579f4c44038b7, type: 2}
   pos: {fileID: 116190414}
   force: 1000
   speed: 10

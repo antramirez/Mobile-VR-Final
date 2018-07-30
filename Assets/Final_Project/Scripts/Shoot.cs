@@ -5,8 +5,9 @@ using UnityEngine;
 public class Shoot : MonoBehaviour 
 {
     // declare a variables to be used below
-    public GameObject projectile;
+    public GameObject ball;
     public Transform pos;
+    GameObject shot;
     public float force = 1000f;
     public float speed = 10f;
     public float accel_decel = 1f;
@@ -15,30 +16,12 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         // load the Ball prefab that will be instantiated below
-        projectile = Resources.Load("Knicks Bball") as GameObject;
+        //projectile = Resources.Load("Knicks Bball") as GameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        // have more force on the shot if the user clicks F (double force)
-        if (Input.GetKey(KeyCode.F))
-        {
-            accel_decel = 2f;
-        }
-        // have less force on the shot if the user clicks H (half force)
-        else if (Input.GetKey(KeyCode.H))
-        {
-            accel_decel = .5f;
-        }
-        // get back to the default speed by clicking N (normal)
-        else if (Input.GetKey(KeyCode.N))
-        {
-            accel_decel = 1f;
-        }
-        */
-
         float horiz = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
@@ -48,11 +31,14 @@ public class Shoot : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // instantitate the ball and shoot it from the camera
-            GameObject shot = Instantiate(projectile, pos.position, pos.rotation) as GameObject;
+            shot = Instantiate(ball);
+            shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
+            shot.transform.Rotate(transform.rotation.x, transform.rotation.y, transform.rotation.z);
             // make it act as a rigidbody
             Rigidbody body = shot.GetComponent<Rigidbody>();
             // shoot it with the given direction, force, and speed
             body.AddForce(pos.forward * force * accel_decel);
+            Destroy(shot, 2.5f);
         }
     }
 }

@@ -64,7 +64,7 @@ public class SpawnHoopsAndSeats : MonoBehaviour
             bball_hoop.transform.position = new Vector3(hoops_back, 0.95f, -2.8f);
             bball_hoop.transform.Rotate(0, 0, 0);
         }
-
+        /*
         for (int i = 0; i < 4; i++)
         {
             seats_left += 10.7f;
@@ -273,5 +273,6 @@ public class SpawnHoopsAndSeats : MonoBehaviour
                 }
             }
         }
+        */
 	}
 }
