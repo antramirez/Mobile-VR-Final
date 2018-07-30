@@ -1,6 +1,6 @@
 iOS
 PlayerPath?
-/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/builds/assignment3/final_v1
+/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/builds/assignment3/final_v2
 SceneListBegin?
 Assets/Final_Project/Scenes/Court.unity
 SceneListEnd?
@@ -222,13 +222,13 @@ a8b185f93b85036e13e3f553c802615a Assembly-CSharp.dll:.GvrTooltip
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityStandardAssets.Utility.FPSCounter
 7f88db6deea6b4d2af344791aaa07731 Assembly-CSharp.dll:.GvrPointerInputModule
 7d05c1a36ca8db05546065b852216990 Assembly-CSharp.dll:.GvrController
+f4306178f18e6fa07a95f71f20c977ac Assembly-CSharp.dll:.Shoot
 0993c6cb8df0e25910c3ca6e47a7f2de Assembly-CSharp.dll:GoogleVR.VideoDemo.MenuHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Gvr.Internal.EmulatorClientSocket
 05693e88d466615d13f5f88ad166c12b Assembly-CSharp.dll:A08dkg3.EnemyMoveAndShoot
 7d05c1a36ca8db05546065b852216990 Assembly-CSharp.dll:.GvrControllerInput
 e399fc54e753911801f12ac57c8fc414 Assembly-CSharp.dll:GoogleVR.HelloVR.HelloVRManager
 b2945430dfd6bbdb5d77043b47bf85e7 Assembly-CSharp.dll:.GvrControllerReticleVisual
+6362048e02b1cbd31c55907b68e37267 Assembly-CSharp.dll:.SpawnHoopsAndSeats
 d885ad79a6ef5bfe2ce10637aac0b8a0 Assembly-CSharp.dll:GoogleVR.VideoDemo.AutoPlayVideo
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-5021c26ee77c2f894214444841171242 Assembly-CSharp.dll:.SpawnHoops
-f4306178f18e6fa07a95f71f20c977ac Assembly-CSharp.dll:.Shoot

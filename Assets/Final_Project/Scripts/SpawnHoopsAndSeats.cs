@@ -73,27 +73,6 @@ public class SpawnHoopsAndSeats : MonoBehaviour
             seat.transform.position = new Vector3(-22.0f, -1.0f, seats_left);
             seat.transform.Rotate(0, 90, 0);
         }
-        /*
-        seats_left = -22.1f;
-        for (int i = 0; i < 4; i++)
-        {
-            seats_left += 10.7f;
-            // instantiate the seat prefab
-            seat = Instantiate(seats);
-            seat.transform.position = new Vector3(-31.0f, 1.4f, seats_left);
-            seat.transform.Rotate(0, 90, 0);
-        }
-        seats_left = -22.1f;
-        for (int i = 0; i < 4; i++)
-        {
-            seats_left += 10.7f;
-            // instantiate the seat prefab
-            seat = Instantiate(seats);
-            seat.transform.position = new Vector3(-40.0f, 3.8f, seats_left);
-            seat.transform.Rotate(0, 90, 0);
-        }
-        */
-
         for (int i = 0; i < 4; i++)
         {
             seats_right += 10.7f;
@@ -102,27 +81,6 @@ public class SpawnHoopsAndSeats : MonoBehaviour
             seat.transform.position = new Vector3(22.2f, -1.0f, seats_right);
             seat.transform.Rotate(0, 270, 0);
         }
-        /*
-        seats_right = -22.1f;
-        for (int i = 0; i < 4; i++)
-        {
-            seats_right += 10.7f;
-            // instantiate the seat prefab
-            seat = Instantiate(seats);
-            seat.transform.position = new Vector3(31.2f, 1.4f, seats_right);
-            seat.transform.Rotate(0, 270, 0);
-        }
-        seats_right = -22.1f;
-        for (int i = 0; i < 4; i++)
-        {
-            seats_right += 10.7f;
-            // instantiate the seat prefab
-            seat = Instantiate(seats);
-            seat.transform.position = new Vector3(40.2f, 3.8f, seats_right);
-            seat.transform.Rotate(0, 270, 0);
-        }
-        */
-
         for (int i = 0; i < 3; i++)
         {
             seats_forward += 11.8f;
@@ -131,27 +89,6 @@ public class SpawnHoopsAndSeats : MonoBehaviour
             seat.transform.position = new Vector3(seats_forward, -1.0f, 19.5f);
             seat.transform.Rotate(0, 180, 0);
         }
-        /*
-        seats_forward = -23.6f;
-        for (int i = 0; i < 3; i++)
-        {
-            seats_forward += 11.8f;
-            // instantiate the seat prefab
-            seat = Instantiate(seats);
-            seat.transform.position = new Vector3(seats_forward, 1.4f, 28.5f);
-            seat.transform.Rotate(0, 180, 0);
-        }
-        seats_forward = -23.6f;
-        for (int i = 0; i < 3; i++)
-        {
-            seats_forward += 11.8f;
-            // instantiate the seat prefab
-            seat = Instantiate(seats);
-            seat.transform.position = new Vector3(seats_forward, 3.8f, 37.5f);
-            seat.transform.Rotate(0, 180, 0);
-        }
-        */
-
         for (int i = 0; i < 3; i++)
         {
             seats_back += 11.8f;
@@ -160,33 +97,6 @@ public class SpawnHoopsAndSeats : MonoBehaviour
             seat.transform.position = new Vector3(seats_back, -1.0f, -9.5f);
             seat.transform.Rotate(0, 0, 0);
         }
-        /*
-        seats_back = -23.6f;
-        for (int i = 0; i < 3; i++)
-        {
-            seats_back += 11.8f;
-            // instantiate the seat prefab
-            seat = Instantiate(seats);
-            seat.transform.position = new Vector3(seats_back, 1.4f, -18.5f);
-            seat.transform.Rotate(0, 0, 0);
-        }
-        seats_back = -23.6f;
-        for (int i = 0; i < 3; i++)
-        {
-            seats_back += 11.8f;
-            // instantiate the seat prefab
-            seat = Instantiate(seats);
-            seat.transform.position = new Vector3(seats_back, 3.8f, -27.5f);
-            seat.transform.Rotate(0, 0, 0);
-        }
-        */
-
-
-
-
-
-
-
 
         for (int i = 0; i < 15; i++)
         {
@@ -274,7 +184,6 @@ public class SpawnHoopsAndSeats : MonoBehaviour
                 }
             }
         }
-
 
         audience_pos_x = -18.4f;
         audience_pos_y = -.3f;
