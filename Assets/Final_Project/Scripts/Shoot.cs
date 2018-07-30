@@ -15,12 +15,13 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         // load the Ball prefab that will be instantiated below
-        projectile = Resources.Load("Ball") as GameObject;
+        projectile = Resources.Load("Knicks Bball") as GameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         // have more force on the shot if the user clicks F (double force)
         if (Input.GetKey(KeyCode.F))
         {
@@ -36,6 +37,7 @@ public class Shoot : MonoBehaviour
         {
             accel_decel = 1f;
         }
+        */
 
         float horiz = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;

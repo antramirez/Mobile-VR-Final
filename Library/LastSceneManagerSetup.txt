@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Assignments/Assignment_04/A04_dkg3/Scenes/GazeMovement.unity
+- path: Assets/Final_Project/Scenes/Court.unity
   isLoaded: 1
   isActive: 1
