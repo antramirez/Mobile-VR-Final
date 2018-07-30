@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 1309095814981100, guid: ff920d46bb1c8446c9e579f4c44038b7, type: 2}
   pos: {fileID: 116190414}
-  force: 850
+  force: 1000
   speed: 5
   accel_decel: 1
 --- !u!1 &170076733

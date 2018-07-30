@@ -8,7 +8,7 @@ public class Shoot : MonoBehaviour
     public GameObject ball;
     public Transform pos;
     GameObject shot;
-    public float force = 850f;
+    public float force = 1000f;
     public float speed = 5f;
     public float accel_decel = 1f;
 
@@ -32,11 +32,11 @@ public class Shoot : MonoBehaviour
         {
             // instantitate the ball and shoot it from the camera
             shot = Instantiate(ball);
-            shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
+            shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             // make it act as a rigidbody
             Rigidbody body = shot.GetComponent<Rigidbody>();
             // shoot it with the given direction, force, and speed
-            body.AddForce(transform.forward * force * accel_decel);
+            body.AddForce(Camera.main.transform.forward * force * accel_decel);
             Destroy(shot, 2.5f);
         }
     }
