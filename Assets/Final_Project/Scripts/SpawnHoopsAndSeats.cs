@@ -5,12 +5,14 @@ using UnityEngine;
 public class SpawnHoopsAndSeats : MonoBehaviour 
 {
 	public GameObject bball_hoops;
+    //public GameObject ball_collider;
     public GameObject seats;
     public GameObject w_people;
     public GameObject w2_people;
     public GameObject b_people;
     public GameObject b2_people;
     GameObject bball_hoop;
+    //GameObject ball_coll;
     GameObject seat;
     GameObject w_person;
     GameObject w2_person;
