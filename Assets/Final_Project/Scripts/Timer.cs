@@ -11,8 +11,8 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        time = 10f;
-        timeLeft = Time.time + 10f;
+        time = 90f;
+        timeLeft = Time.time + 90f;
         timerText.color = Color.white;
 	}
 	
@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour {
             return;
         }
         time = timeLeft - Time.time;
-        string sec = (time % 11).ToString("f1");
+        string sec = (time % 91).ToString("f1");
         timerText.text = sec;
 	}
 
