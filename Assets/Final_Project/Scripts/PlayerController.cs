@@ -6,7 +6,7 @@ public class PlayerController : NetworkBehaviour
     public GameObject ball;
     public Transform pos;
     GameObject shot;
-    public float force = 650f;
+    public float force = 570f;
     public float speed = 5f;
     public float accel_decel = 1f;
 
@@ -15,7 +15,7 @@ public class PlayerController : NetworkBehaviour
         // check to make sure the player is local
         if (!isLocalPlayer)
         {
-            transform.Rotate(0, 180, 0);
+            Camera.main.transform.Rotate(0, 180, 0);
             return;
         }
 
@@ -26,63 +26,63 @@ public class PlayerController : NetworkBehaviour
 
         if ((Camera.main.transform.localEulerAngles.y > 15f && Camera.main.transform.localEulerAngles.y <= 40f))
         {
-            force = 675f;
-        }
-        else if ((Camera.main.transform.localEulerAngles.y > 320f && Camera.main.transform.localEulerAngles.y <= 345f))
-        {
-            force = 675f;
-        }
-        else if ((Camera.main.transform.localEulerAngles.y > 300f && Camera.main.transform.localEulerAngles.y <= 320f))
-        {
-            force = 770f;
+            force = 610f;
         }
         else if ((Camera.main.transform.localEulerAngles.y > 40f && Camera.main.transform.localEulerAngles.y <= 60f))
         {
-            force = 770f;
+            force = 720f;
         }
         else if ((Camera.main.transform.localEulerAngles.y > 60f && Camera.main.transform.localEulerAngles.y <= 75f))
         {
-            force = 810f;
+            force = 790f;
         }
-        else if ((Camera.main.transform.localEulerAngles.y > 75f && Camera.main.transform.localEulerAngles.y <= 115f))
+        else if ((Camera.main.transform.localEulerAngles.y > 75f && Camera.main.transform.localEulerAngles.y <= 110f))
         {
             force = 790f;
         }
-        else if ((Camera.main.transform.localEulerAngles.y > 115f && Camera.main.transform.localEulerAngles.y <= 130f))
+        else if ((Camera.main.transform.localEulerAngles.y > 110f && Camera.main.transform.localEulerAngles.y <= 125f))
         {
-            force = 730f;
+            force = 810f;
         }
-        else if ((Camera.main.transform.localEulerAngles.y > 130f && Camera.main.transform.localEulerAngles.y <= 160f))
+        else if ((Camera.main.transform.localEulerAngles.y > 125f && Camera.main.transform.localEulerAngles.y <= 140f))
         {
-            force = 610f;
+            force = 770f;
         }
-        else if ((Camera.main.transform.localEulerAngles.y > 200f && Camera.main.transform.localEulerAngles.y <= 230f))
+        else if ((Camera.main.transform.localEulerAngles.y > 140f && Camera.main.transform.localEulerAngles.y <= 160f))
         {
-            force = 610f;
+            force = 675f;
         }
         else if ((Camera.main.transform.localEulerAngles.y > 160f && Camera.main.transform.localEulerAngles.y <= 200f))
         {
-            force = 570f;
+            force = 650f;
         }
-        else if ((Camera.main.transform.localEulerAngles.y > 230f && Camera.main.transform.localEulerAngles.y <= 245f))
+        else if ((Camera.main.transform.localEulerAngles.y > 200f && Camera.main.transform.localEulerAngles.y <= 220f))
         {
-            force = 730f;
+            force = 675f;
         }
-        else if ((Camera.main.transform.localEulerAngles.y > 245f && Camera.main.transform.localEulerAngles.y <= 265f))
+        else if ((Camera.main.transform.localEulerAngles.y > 220f && Camera.main.transform.localEulerAngles.y <= 240f))
         {
-            force = 790f;
+            force = 770f;
         }
-        else if ((Camera.main.transform.localEulerAngles.y > 265f && Camera.main.transform.localEulerAngles.y <= 285f))
-        {
-            force = 790f;
-        }
-        else if ((Camera.main.transform.localEulerAngles.y > 285f && Camera.main.transform.localEulerAngles.y <= 300f))
+        else if ((Camera.main.transform.localEulerAngles.y > 240f && Camera.main.transform.localEulerAngles.y <= 255f))
         {
             force = 810f;
         }
+        else if ((Camera.main.transform.localEulerAngles.y > 255f && Camera.main.transform.localEulerAngles.y <= 290f))
+        {
+            force = 790f;
+        }
+        else if ((Camera.main.transform.localEulerAngles.y > 290f && Camera.main.transform.localEulerAngles.y <= 310f))
+        {
+            force = 720f;
+        }
+        else if ((Camera.main.transform.localEulerAngles.y > 310f && Camera.main.transform.localEulerAngles.y <= 345f))
+        {
+            force = 610f;
+        }
         else
         {
-            force = 650f;
+            force = 570f;
         }
         print(force);
 
