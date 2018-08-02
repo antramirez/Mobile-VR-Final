@@ -129,8 +129,9 @@ GameObject:
   - component: {fileID: 114522432249527116}
   - component: {fileID: 114368496664125792}
   - component: {fileID: 114525681605617360}
+  - component: {fileID: 114056228464096368}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Players
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,13 +143,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1589049899319950}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalScale: {x: 0.25, y: 0.5, z: 0.25}
   m_Children: []
   m_Father: {fileID: 4862305833138560}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!4 &4087878149964384
 Transform:
   m_ObjectHideFlags: 1
@@ -156,7 +157,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843401062222468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 1}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4862305833138560}
@@ -183,7 +184,7 @@ Transform:
   m_GameObject: {fileID: 1986122230701388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 4211771090156950}
   - {fileID: 4062674180986706}
@@ -330,6 +331,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114056228464096368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1986122230701388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7c3cf6812f94823963e15361293467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1309095814981100, guid: ff920d46bb1c8446c9e579f4c44038b7, type: 2}
+  pos: {fileID: 4087878149964384}
+  force: 650
+  speed: 5
+  accel_decel: 1
 --- !u!114 &114191849451914220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,22 +409,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 139
-    i1: 65
-    i2: 18
-    i3: 19
-    i4: 85
-    i5: 251
-    i6: 68
-    i7: 246
-    i8: 27
-    i9: 27
-    i10: 19
-    i11: 58
-    i12: 131
-    i13: 156
-    i14: 200
-    i15: 89
+    i0: 179
+    i1: 186
+    i2: 161
+    i3: 152
+    i4: 117
+    i5: 60
+    i6: 100
+    i7: 48
+    i8: 138
+    i9: 45
+    i10: 31
+    i11: 23
+    i12: 128
+    i13: 194
+    i14: 199
+    i15: 254
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &114368496664125792

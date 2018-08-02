@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 135933872837851400}
   - component: {fileID: 54374206988887536}
   - component: {fileID: 114695833811172712}
+  - component: {fileID: 114658153222899314}
+  - component: {fileID: 114857998437656160}
   m_Layer: 0
   m_Name: Knicks Bball
   m_TagString: Untagged
@@ -101,6 +103,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114658153222899314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309095814981100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 255
+    i1: 146
+    i2: 13
+    i3: 70
+    i4: 187
+    i5: 28
+    i6: 132
+    i7: 70
+    i8: 201
+    i9: 229
+    i10: 121
+    i11: 244
+    i12: 196
+    i13: 64
+    i14: 56
+    i15: 183
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114695833811172712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +150,27 @@ MonoBehaviour:
   ballCollider: {fileID: 1965039851049944, guid: 74003577ad3f14a27965372dae0e2a0f,
     type: 2}
   explosion: {fileID: 1045886108852078, guid: 818be7ebb861e4beba51e85dbe8f9f02, type: 2}
+--- !u!114 &114857998437656160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309095814981100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!135 &135933872837851400
 SphereCollider:
   m_ObjectHideFlags: 1

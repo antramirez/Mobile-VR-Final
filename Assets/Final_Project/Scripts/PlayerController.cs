@@ -5,11 +5,12 @@ namespace A08dkg3
 {
     public class PlayerController : NetworkBehaviour
     {
-        // this script is used to make the player move around the scene and be able to shoot at enemies
-
-        // declare variables to be used to create and spawn bullets
-        public GameObject bulletPrefab;
-        public Transform bulletSpawn;
+        public GameObject ball;
+        public Transform pos;
+        GameObject shot;
+        public float force = 650f;
+        public float speed = 5f;
+        public float accel_decel = 1f;
 
 		void Update()
         {
@@ -19,12 +20,46 @@ namespace A08dkg3
                 return;
             }
 
+            float horiz = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+            float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+
+            transform.Translate(new Vector3(horiz, vert, 0f));
+
+            if ((Camera.main.transform.localEulerAngles.y > 40f && Camera.main.transform.localEulerAngles.y <= 60f))
+            {
+                force = 770f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 120f && Camera.main.transform.localEulerAngles.y <= 140f))
+            {
+                force = 770f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 220f && Camera.main.transform.localEulerAngles.y <= 240f))
+            {
+                force = 770f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 300f && Camera.main.transform.localEulerAngles.y <= 320f))
+            {
+                force = 770f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 60f && Camera.main.transform.localEulerAngles.y < 120f))
+            {
+                force = 825f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 240f && Camera.main.transform.localEulerAngles.y < 300f))
+            {
+                force = 825f;
+            }
+            else
+            {
+                force = 650f;
+            }
+
             // position the camera just above the first person player
             Camera.main.transform.parent.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
             // allow the player to rotate left and right based on head movement
             transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
             // have the player moving forward at a constant slow speed so all they have to worry about is shooting
-            transform.position += transform.forward * 2f * Time.deltaTime;
+            //transform.position += transform.forward * 2f * Time.deltaTime;
 
             // fire the bullet when the trigger is pressed
             if (Input.GetMouseButtonDown(0))
@@ -38,20 +73,14 @@ namespace A08dkg3
         [Command]
         void CmdFire()
         {
-            // Create the Bullet from the Bullet Prefab
-            var bullet = (GameObject)Instantiate(
-                bulletPrefab,
-                bulletSpawn.position,
-                bulletSpawn.rotation);
-
-            // Add velocity to the bullet
-            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
-
-            // Spawn the bullet on the Clients
-            NetworkServer.Spawn(bullet);
-
-            // Destroy the bullet after 2 seconds
-            Destroy(bullet, 2.0f);
+            // instantitate the ball and shoot it from the camera
+            shot = Instantiate(ball);
+            shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            // make it act as a rigidbody
+            Rigidbody body = shot.GetComponent<Rigidbody>();
+            // shoot it with the given direction, force, and speed
+            body.AddForce((transform.forward + transform.up) / 2f * force * accel_decel);
+            Destroy(shot, 4f);
         }
 
         public override void OnStartLocalPlayer()
