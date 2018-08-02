@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class Timer : MonoBehaviour {
+public class Timer : NetworkBehaviour 
+{
 
     public Text timerText;
     private float timeLeft;

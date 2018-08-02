@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class SpawnHoopsAndSeats : MonoBehaviour 
+public class SpawnHoopsAndSeats : NetworkBehaviour 
 {
 	public GameObject bball_hoops;
     //public GameObject ball_collider;
