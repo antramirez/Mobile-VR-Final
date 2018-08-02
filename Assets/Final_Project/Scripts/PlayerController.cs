@@ -25,7 +25,6 @@ public class PlayerController : NetworkBehaviour
         // check to make sure the player is local
         if (!isLocalPlayer)
         {
-            Camera.main.transform.Rotate(0, 180, 0);
             return;
         }
 
