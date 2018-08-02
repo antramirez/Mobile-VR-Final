@@ -140,6 +140,7 @@ public class PlayerController : NetworkBehaviour
         Rigidbody body = shot.GetComponent<Rigidbody>();
         // shoot it with the given direction, force, and speed
         body.AddForce((transform.forward + transform.up) / 2f * force * accel_decel);
+        NetworkServer.Spawn(shot);
         Destroy(shot, 4f);
     }
 
