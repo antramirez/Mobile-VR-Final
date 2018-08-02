@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class Timer : NetworkBehaviour 
 {
-
+    [SyncVar]
     public Text timerText;
     private float timeLeft;
     private bool gameOver = false;
@@ -31,6 +31,7 @@ public class Timer : NetworkBehaviour
         time = timeLeft - Time.time;
         string sec = (time % 91).ToString("f1");
         timerText.text = sec;
+        print(sec);
 	}
 
     public void Finish()

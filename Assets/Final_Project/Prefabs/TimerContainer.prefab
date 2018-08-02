@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 224358570178075466}
   - component: {fileID: 222371585139772344}
   - component: {fileID: 114691149836317368}
+  - component: {fileID: 114409024895172934}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -62,6 +63,38 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114409024895172934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720208542169790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 254
+    i1: 31
+    i2: 44
+    i3: 179
+    i4: 213
+    i5: 41
+    i6: 36
+    i7: 51
+    i8: 8
+    i9: 103
+    i10: 121
+    i11: 64
+    i12: 255
+    i13: 191
+    i14: 219
+    i15: 239
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114691149836317368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +127,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Seconds Remaining
+  m_Text: 72.3
 --- !u!114 &114724460973770198
 MonoBehaviour:
   m_ObjectHideFlags: 1
