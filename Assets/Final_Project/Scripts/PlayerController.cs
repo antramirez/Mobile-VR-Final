@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 
+
 public class PlayerController : NetworkBehaviour
 {
     public GameObject ball;
@@ -10,6 +11,15 @@ public class PlayerController : NetworkBehaviour
     public float speed = 5f;
     public float accel_decel = 1f;
 
+    public int score = 0;
+    //public GameObject sn;
+    private ShotMade snScript;
+
+	private void Start()
+	{
+        snScript = ball.GetComponent<ShotMade>();
+        score = snScript.count;
+	}
 	void Update()
     {
         // check to make sure the player is local
@@ -84,7 +94,7 @@ public class PlayerController : NetworkBehaviour
         {
             force = 570f;
         }
-        print(force);
+        //print(force);
 
         // position the camera just above the first person player
         Camera.main.transform.parent.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
@@ -99,6 +109,23 @@ public class PlayerController : NetworkBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             CmdFire();
+        }
+
+
+
+        if(snScript.shotgood)
+        {
+
+            if(isServer) {
+                // update score object
+
+
+            }
+
+
+
+            print(score);
+            Destroy(ball);
         }
     }
 

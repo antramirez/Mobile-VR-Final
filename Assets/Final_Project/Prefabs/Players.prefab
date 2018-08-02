@@ -348,6 +348,8 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
+  score: 0
+  bucket: {fileID: 114695833811172712, guid: ff920d46bb1c8446c9e579f4c44038b7, type: 2}
 --- !u!114 &114191849451914220
 MonoBehaviour:
   m_ObjectHideFlags: 1

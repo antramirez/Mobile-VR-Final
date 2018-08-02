@@ -150,6 +150,8 @@ MonoBehaviour:
   ballCollider: {fileID: 1965039851049944, guid: 74003577ad3f14a27965372dae0e2a0f,
     type: 2}
   explosion: {fileID: 1045886108852078, guid: 818be7ebb861e4beba51e85dbe8f9f02, type: 2}
+  shotgood: 0
+  count: 0
 --- !u!114 &114857998437656160
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -976,6 +976,7 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
+  score: 0
 --- !u!114 &563342884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,6 +1377,7 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
+  score: 0
 --- !u!114 &748832042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1572,6 +1574,7 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
+  score: 0
 --- !u!114 &811480473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1876,6 +1879,8 @@ MonoBehaviour:
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs:
+  - {fileID: 1309095814981100, guid: ff920d46bb1c8446c9e579f4c44038b7, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_CustomConfig: 0
   m_MaxConnections: 4
@@ -3253,6 +3258,7 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
+  score: 0
 --- !u!114 &1631867137
 MonoBehaviour:
   m_ObjectHideFlags: 0

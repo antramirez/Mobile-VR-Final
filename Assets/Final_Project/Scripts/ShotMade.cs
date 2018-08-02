@@ -11,28 +11,22 @@ public class ShotMade : NetworkBehaviour
     public GameObject explosion;
     GameObject explode;
 
-    // Use this for initialization
-    void Start()
-    {
+    public bool shotgood = false;
+    public int count;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnCollisionEnter(Collision col)
+    public void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "BallCollider")
         {
             explode = Instantiate(explosion);
             explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y+.275f, col.transform.position.z+.5f);
-            Destroy(ball);
+          //  Destroy(ball);
             Destroy(explode, 2);
             col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
             Destroy(col.transform.parent.gameObject, 3);
+            shotgood = true;
+            //count++;
+            //print(count);
         }
     }
 }
