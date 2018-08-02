@@ -1879,10 +1879,8 @@ MonoBehaviour:
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs:
-  - {fileID: 1309095814981100, guid: ff920d46bb1c8446c9e579f4c44038b7, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_CustomConfig: 0
+  - {fileID: 1986122230701388, guid: b3baa198753c64308a2d1f1780c2c7fe, type: 2}
+  m_CustomConfig: 1
   m_MaxConnections: 4
   m_ConnectionConfig:
     m_PacketSize: 1440
@@ -1924,7 +1922,7 @@ MonoBehaviour:
     m_MaxTimerTimeout: 12000
     m_MinNetSimulatorTimeout: 1
     m_MaxNetSimulatorTimeout: 12000
-  m_Channels: 
+  m_Channels: 0500000000000000
   m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1

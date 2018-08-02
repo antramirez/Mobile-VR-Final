@@ -1,6 +1,6 @@
-iOS
+OSXStandalone
 PlayerPath?
-/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/builds/assignment3/final_v2
+/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/builds/assignment3/final_v3.app
 SceneListBegin?
 Assets/Final_Project/Scenes/Court.unity
 SceneListEnd?
@@ -146,7 +146,7 @@ a2efb0db652b8114d1ae7dd9a600d626 Assembly-CSharp.dll:UnityStandardAssets.CrossPl
 fe76270bd84ec3b6f2f6f92c69cf69da Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
 03f12694d8815c5c1846b514244afecc Assembly-CSharp.dll:.GvrAllEventsTrigger
 a7d3c6c6948d99dd4116e659ddcf5ac4 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.ButtonHandler
-05693e88d466615d13f5f88ad166c12b Assembly-CSharp.dll:A08dkg3.PlayerController
+958e8e0c80eac4c3fef3d8a93f9cf28f Assembly-CSharp.dll:.PlayerController
 97fad6876fd8bbd73ad2849c651a3f62 Assembly-CSharp.dll:UnityStandardAssets.Characters.FirstPerson.HeadBob
 82c4df0703ee0c74fec7eda7f1754686 Assembly-CSharp.dll:.GvrAudioListener
 a90e94673f50d2237c1b971c138660c6 Assembly-CSharp.dll:UnityStandardAssets.Utility.AutoMoveAndRotate
@@ -174,6 +174,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 72903e4446a2f2d54923b10a70b2c5ba Assembly-CSharp.dll:Gvr.Internal.InstantPreview
 2dbfd4f7836c7f6a79e17be5f4bf7969 Assembly-CSharp.dll:UnityStandardAssets.Utility.WaypointCircuit
+ea257d0ff02f704cf5789cf6f5a5f0a0 Assembly-CSharp.dll:.Timer
 1c952386af3ef6bd3c90a34c4fd12f6b Assembly-CSharp.dll:GoogleVR.HelloVR.ObjectController
 60ade6aa5619663d6e9ca7c5523d4a4a Assembly-CSharp.dll:UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GvrControllerTooltipsSimple
@@ -208,6 +209,7 @@ eca6588934e978a74735e6737af683a8 Assembly-CSharp.dll:.GvrReticlePointer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp.dll:UnityStandardAssets.Utility.FollowTarget
 2a13deadfd379d1bb4ab0ebd2c20ca7e Assembly-CSharp.dll:.GvrLaserVisual
+71a88c332fa1ac928d83ffae31b1e026 Assembly-CSharp.dll:.ShotMade
 24f6a3eb1c9b232bcf23fbcef06cdf98 Assembly-CSharp.dll:.GvrControllerVisual
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 0ad469aca31264c6140b1e503c43ab6b Assembly-CSharp.dll:UnityStandardAssets.Utility.TimedObjectDestructor
@@ -222,7 +224,7 @@ a8b185f93b85036e13e3f553c802615a Assembly-CSharp.dll:.GvrTooltip
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityStandardAssets.Utility.FPSCounter
 7f88db6deea6b4d2af344791aaa07731 Assembly-CSharp.dll:.GvrPointerInputModule
 7d05c1a36ca8db05546065b852216990 Assembly-CSharp.dll:.GvrController
-f4306178f18e6fa07a95f71f20c977ac Assembly-CSharp.dll:.Shoot
+9ce9ce303d3a3de03c0166e92119a1db Assembly-CSharp.dll:.Shoot
 0993c6cb8df0e25910c3ca6e47a7f2de Assembly-CSharp.dll:GoogleVR.VideoDemo.MenuHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Gvr.Internal.EmulatorClientSocket
 05693e88d466615d13f5f88ad166c12b Assembly-CSharp.dll:A08dkg3.EnemyMoveAndShoot
