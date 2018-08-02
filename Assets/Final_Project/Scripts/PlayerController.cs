@@ -8,7 +8,7 @@ namespace A08dkg3
         public GameObject ball;
         public Transform pos;
         GameObject shot;
-        public float force = 650f;
+        public float force = 600f;
         public float speed = 5f;
         public float accel_decel = 1f;
 
@@ -27,31 +27,31 @@ namespace A08dkg3
 
             if ((Camera.main.transform.localEulerAngles.y > 40f && Camera.main.transform.localEulerAngles.y <= 60f))
             {
-                force = 770f;
+                force = 725f;
             }
             else if ((Camera.main.transform.localEulerAngles.y > 120f && Camera.main.transform.localEulerAngles.y <= 140f))
             {
-                force = 770f;
+                force = 725f;
             }
             else if ((Camera.main.transform.localEulerAngles.y > 220f && Camera.main.transform.localEulerAngles.y <= 240f))
             {
-                force = 770f;
+                force = 725f;
             }
             else if ((Camera.main.transform.localEulerAngles.y > 300f && Camera.main.transform.localEulerAngles.y <= 320f))
             {
-                force = 770f;
+                force = 725f;
             }
             else if ((Camera.main.transform.localEulerAngles.y > 60f && Camera.main.transform.localEulerAngles.y < 120f))
             {
-                force = 825f;
+                force = 775f;
             }
             else if ((Camera.main.transform.localEulerAngles.y > 240f && Camera.main.transform.localEulerAngles.y < 300f))
             {
-                force = 825f;
+                force = 775f;
             }
             else
             {
-                force = 650f;
+                force = 600f;
             }
 
             // position the camera just above the first person player
@@ -74,8 +74,8 @@ namespace A08dkg3
         void CmdFire()
         {
             // instantitate the ball and shoot it from the camera
-            shot = Instantiate(ball);
-            shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            shot = Instantiate(ball, pos.position, pos.rotation);
+            //shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             // make it act as a rigidbody
             Rigidbody body = shot.GetComponent<Rigidbody>();
             // shoot it with the given direction, force, and speed
