@@ -6,9 +6,14 @@ using UnityEngine.Networking;
 public class CustomNetworkDiscovery : NetworkDiscovery {
     private bool _receivedBradcast = false;
 
+    int playernum;
+
+
 	private void Start()
 	{
         Initialize();
+        //TODO
+        // access Game State Script
 	}
 
     public override void OnReceivedBroadcast(string fromAddress, string data)
@@ -28,11 +33,16 @@ public class CustomNetworkDiscovery : NetworkDiscovery {
 
     public void StartListeningBroadcast() {
         StartAsClient();
+        playernum = Random.Range(0,4);
+        // accessing the game state script, check if rand num exists
+        print(playernum);
+
     }
 
     public void StartAsHost () {
         NetworkManager.singleton.StartHost();
         StartAsServer();
+        playernum = 0;
     }
 
 }
