@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Final_Project\Scripts\BallPosition.cs" />
     <Compile Include="Assets\Final_Project\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Final_Project\Scripts\CustomNetworkDiscovery.cs" />
     <Compile Include="Assets\Final_Project\Scripts\EnemyMoveAndShoot.cs" />
     <Compile Include="Assets\Final_Project\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Final_Project\Scripts\Health.cs" />
