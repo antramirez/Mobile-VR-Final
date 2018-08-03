@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1239261710}
         m_MethodName: StartListeningBroadcast
         m_Mode: 1
         m_Arguments:
@@ -2658,8 +2658,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145388344196d4918b5a248663a23389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BroadcastPort: 47777
-  m_BroadcastKey: 2222
+  m_BroadcastPort: 6565
+  m_BroadcastKey: 2322
   m_BroadcastVersion: 1
   m_BroadcastSubVersion: 1
   m_BroadcastInterval: 1000
@@ -4374,7 +4374,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1239261710}
         m_MethodName: StartAsHost
         m_Mode: 1
         m_Arguments:
