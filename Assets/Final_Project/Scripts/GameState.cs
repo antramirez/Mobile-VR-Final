@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class GameState : NetworkBehaviour {
     //public ArrayList players = new ArrayList();
     //public float[] players= new float[4];
-
+    [SyncVar]
     public int[] players = new int[] {-1, -1, -1, -1};
     //[SyncVar]
     public  int maxPlayers = 4;
