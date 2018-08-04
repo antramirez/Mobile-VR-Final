@@ -19,6 +19,14 @@ public class PlayerController : NetworkBehaviour
     public GameObject networkGameObj;
     public float playerNumber;
 
+    private GameState gsScript;
+    public GameObject gsGameObject;
+
+    bool player1;
+
+    bool host;
+    bool client;
+
 	private void Start()
 	{
         snScript = ball.GetComponent<ShotMade>();
@@ -26,10 +34,20 @@ public class PlayerController : NetworkBehaviour
 
         netScript = networkGameObj.GetComponent<CustomNetworkDiscovery>();
 
+        gsScript = gsGameObject.GetComponent<GameState>();
 	}
 	void Update()
     {
-
+        //print("There are currently " + gsScript.NumPlayers() + " players");
+        if (gsScript.NumPlayers() > 0 && gsScript.NumPlayers() < 2){
+            print("YOU ARE PLAYER 1");
+            host = true;
+        }
+        else if (gsScript.NumPlayers() > 1)
+        {
+            print("YOU ARE PLAYER 2");
+            host = true;
+        }
         //if (netScript.PlayerNumIsSet())
         //{
         //    playerNumber = netScript.GetPLayerNumber();
