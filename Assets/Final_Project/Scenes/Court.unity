@@ -1058,6 +1058,8 @@ MonoBehaviour:
   speed: 5
   accel_decel: 1
   score: 0
+  networkGameObj: {fileID: 0}
+  playerNumber: 0
 --- !u!114 &563342884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1497,6 +1499,48 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 676806627}
+--- !u!1001 &732127595
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4467419633150996, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.43057275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467419633150996, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.198823
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467419633150996, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 14.043747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467419633150996, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467419633150996, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467419633150996, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467419633150996, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467419633150996, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &811480471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1583,8 @@ MonoBehaviour:
   speed: 5
   accel_decel: 1
   score: 0
+  networkGameObj: {fileID: 0}
+  playerNumber: 0
 --- !u!114 &811480473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2735,56 +2781,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1206472365}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1239261709
+--- !u!1 &1239261709 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1239261711}
-  - component: {fileID: 1239261710}
-  m_Layer: 0
-  m_Name: Custom Network Discovery
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1239261710
+  m_PrefabParentObject: {fileID: 1831689773172468, guid: 4d963bc074fbb4c8f80500cc48099d3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 732127595}
+--- !u!114 &1239261710 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1239261709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 114769332423857304, guid: 4d963bc074fbb4c8f80500cc48099d3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 732127595}
   m_Script: {fileID: 11500000, guid: 145388344196d4918b5a248663a23389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BroadcastPort: 6565
-  m_BroadcastKey: 2322
-  m_BroadcastVersion: 1
-  m_BroadcastSubVersion: 1
-  m_BroadcastInterval: 1000
-  m_UseNetworkManager: 1
-  m_BroadcastData: HELLO
-  m_ShowGUI: 0
-  m_OffsetX: 0
-  m_OffsetY: 0
---- !u!4 &1239261711
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1239261709}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.43057275, y: 1.198823, z: 14.043747}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1245909610
 GameObject:
   m_ObjectHideFlags: 0
@@ -4129,6 +4136,8 @@ MonoBehaviour:
   speed: 5
   accel_decel: 1
   score: 0
+  networkGameObj: {fileID: 0}
+  playerNumber: 0
 --- !u!114 &1631867137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4982,6 +4991,8 @@ MonoBehaviour:
   speed: 5
   accel_decel: 1
   score: 0
+  networkGameObj: {fileID: 1239261709}
+  playerNumber: 0
 --- !u!114 &1971965226
 MonoBehaviour:
   m_ObjectHideFlags: 0

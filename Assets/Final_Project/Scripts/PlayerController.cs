@@ -12,16 +12,29 @@ public class PlayerController : NetworkBehaviour
     public float accel_decel = 1f;
 
     public int score = 0;
-    //public GameObject sn;
     private ShotMade snScript;
+
+
+    private CustomNetworkDiscovery netScript;
+    public GameObject networkGameObj;
+    public float playerNumber;
 
 	private void Start()
 	{
         snScript = ball.GetComponent<ShotMade>();
         score = snScript.count;
+
+        netScript = networkGameObj.GetComponent<CustomNetworkDiscovery>();
+
 	}
 	void Update()
     {
+
+        if (netScript.PlayerNumIsSet())
+        {
+            playerNumber = netScript.GetPLayerNumber();
+            print(playerNumber);
+        }
         // check to make sure the player is local
         if (!isLocalPlayer)
         {

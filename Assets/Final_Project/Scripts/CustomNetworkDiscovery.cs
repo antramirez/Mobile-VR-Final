@@ -7,7 +7,7 @@ public class CustomNetworkDiscovery : NetworkDiscovery {
     private bool _receivedBradcast = false;
 
     float playernum;
-
+    bool playNumSet;
 
 	private void Start()
 	{
@@ -34,16 +34,26 @@ public class CustomNetworkDiscovery : NetworkDiscovery {
     public void StartListeningBroadcast() {
         StartAsClient();
         playernum = (int)Random.Range(1f,3.9f);
+        playNumSet = true;
         // accessing the game state script, check if rand num exists
-        print(playernum);
 
     }
 
     public void StartAsHost () {
         NetworkManager.singleton.StartHost();
         StartAsServer();
-        playernum = 0;
-        print(playernum);
+        SetPlayerNumber(0);
+        playNumSet = true;
     }
 
+    public bool PlayerNumIsSet()
+    {
+        return playNumSet;
+    }
+    public void SetPlayerNumber(float num){
+        playernum = num;
+    }
+    public float GetPLayerNumber(){
+        return playernum;
+    }
 }

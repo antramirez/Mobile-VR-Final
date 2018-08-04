@@ -572,6 +572,9 @@ MonoBehaviour:
   speed: 5
   accel_decel: 1
   score: 0
+  networkGameObj: {fileID: 1831689773172468, guid: 4d963bc074fbb4c8f80500cc48099d3e,
+    type: 2}
+  playerNumber: 0
 --- !u!114 &114108245959588940
 MonoBehaviour:
   m_ObjectHideFlags: 1
