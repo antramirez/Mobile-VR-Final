@@ -40,7 +40,7 @@ public class GameState : NetworkBehaviour {
         {
             AddPlayer(1, 0);
             //print(0);
-            p1set = false;
+            p2set = false;
         }
 
 	}
