@@ -6,8 +6,13 @@ using UnityEngine.Networking;
 public class GameState : NetworkBehaviour {
     //public ArrayList players = new ArrayList();
     //public float[] players= new float[4];
-    [SyncVar]
-    public int[] players = new int[] {-1, -1, -1, -1};
+
+
+    // public int[] players = new int[] {-1, -1, -1, -1};
+
+    public SyncListInt players = new SyncListInt();
+
+
     //[SyncVar]
     public  int maxPlayers = 4;
     [SyncVar]
@@ -32,26 +37,40 @@ public class GameState : NetworkBehaviour {
 	void Update () {
         if (p1set)
         {
-            AddPlayer(0,0);
+            AddPlayer(0);
+            foreach (int score in players){
+                print(score);
+            }
             p1set = false;
 
         }
         if (p2set)
         {
-            AddPlayer(1, 0);
+            AddPlayer(1);
+            foreach (int score in players)
+            {
+                print(score);
+            }
             p2set = false;
         }
 
 	}
 
-    public void AddPlayer(int index, int num) {
-        players[index] = num;
-        if (index == 0)
-            print("Player 1 added to game");
+    //public void AddPlayer(int index, int num) {
+    //    players[index] = num;
+    //    if (index == 0)
+    //        print("Player 1 added to game");
         
-        else if (index == 1)
-            print("Player 2 added to game");
+    //    else if (index == 1)
+    //        print("Player 2 added to game");
+    //}
+
+    public void AddPlayer(int num){
+        players.Add(num);
     }
+
+
+
 
     //public bool DoneCheckingPlayer1()
     //{
