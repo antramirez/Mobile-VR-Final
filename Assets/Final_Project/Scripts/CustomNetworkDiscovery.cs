@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class CustomNetworkDiscovery : NetworkDiscovery {
     private bool _receivedBradcast = false;
 
-    int playernum;
+    float playernum;
 
 
 	private void Start()
@@ -33,7 +33,7 @@ public class CustomNetworkDiscovery : NetworkDiscovery {
 
     public void StartListeningBroadcast() {
         StartAsClient();
-        playernum = Random.Range(0,4);
+        playernum = (int)Random.Range(1f,3.9f);
         // accessing the game state script, check if rand num exists
         print(playernum);
 
@@ -43,6 +43,7 @@ public class CustomNetworkDiscovery : NetworkDiscovery {
         NetworkManager.singleton.StartHost();
         StartAsServer();
         playernum = 0;
+        print(playernum);
     }
 
 }
