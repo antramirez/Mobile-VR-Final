@@ -41,7 +41,7 @@ public class GameState : NetworkBehaviour {
             foreach (int score in players){
                 print(score);
             }
-            //p1set = false;
+            p1set = false;
 
         }
         if (p2set)
