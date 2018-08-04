@@ -38,7 +38,8 @@ public class CustomNetworkDiscovery : NetworkDiscovery {
         }
     }
 
-    public void StartListeningBroadcast() {
+    public void StartListeningBroadcast() 
+    {
         StartAsClient();
         //playernum = (int)Random.Range(1f,3.9f);
         //  SetPlayerNumber(1);
@@ -46,7 +47,8 @@ public class CustomNetworkDiscovery : NetworkDiscovery {
         player2set = true;
     }
 
-    public void StartAsHost () {
+    public void StartAsHost () 
+    {
         NetworkManager.singleton.StartHost();
         StartAsServer();
       //  SetPlayerNumber(0);
