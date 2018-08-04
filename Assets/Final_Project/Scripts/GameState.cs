@@ -5,8 +5,9 @@ using UnityEngine.Networking;
 
 public class GameState : NetworkBehaviour {
     //public ArrayList players = new ArrayList();
+    //public float[] players= new float[4];
 
-    public float[] players= new float[4];
+    public int[] players = new int[] {-1, -1, -1, -1};
     //[SyncVar]
     public  int maxPlayers = 4;
     [SyncVar]
@@ -32,20 +33,18 @@ public class GameState : NetworkBehaviour {
         if (p1set)
         {
             AddPlayer(0,0);
-            //print(0);
             p1set = false;
 
         }
         if (p2set)
         {
             AddPlayer(1, 0);
-            //print(0);
             p2set = false;
         }
 
 	}
 
-    public void AddPlayer(int index, float num) {
+    public void AddPlayer(int index, int num) {
         players[index] = num;
         if (index == 0)
             print("Player 1 added to game");
