@@ -71,15 +71,28 @@ public class GameState : NetworkBehaviour {
     //        print("Player 2 added to game");
     //}
 
-    public void AddPlayer(int num){
+    public void AddPlayer(int num)
+    {
         players.Add(num);
     }
 
-    public int NumPlayers() {
+    public int NumPlayers() 
+    {
         return currPlayers;
 
     } 
 
+    public void UpdatePlayer1Score()
+    {
+        players[0]++;
+        print("player 1 score" + players[0]);
+    }
+
+    public void UpdatePlayer2Score()
+    {
+        players[1]++;
+        print("player 2 score" + players[1]);
+    }
 
 
 

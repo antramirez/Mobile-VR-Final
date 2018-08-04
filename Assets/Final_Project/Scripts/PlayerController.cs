@@ -144,20 +144,20 @@ public class PlayerController : NetworkBehaviour
         }
 
 
-
-        if(snScript.shotgood)
+        print(snScript.ShotGood());
+        if(snScript.ShotGood())
         {
-
-            if(isServer) {
-                // update score object
-
-
+            print("buckets");
+            if(host)
+            {
+                gsScript.UpdatePlayer1Score();
             }
-
-
-
-            print(score);
-            Destroy(ball);
+            else if (client)
+            {
+                gsScript.UpdatePlayer2Score();
+            }
+            //print(score);
+            //Destroy(ball);
         }
     }
 
