@@ -42,11 +42,13 @@ public class PlayerController : NetworkBehaviour
         if (gsScript.NumPlayers() > 0 && gsScript.NumPlayers() < 2){
             print("YOU ARE PLAYER 1");
             host = true;
+            client = false;
         }
         else if (gsScript.NumPlayers() > 1)
         {
             print("YOU ARE PLAYER 2");
-            host = true;
+            host = false;
+            client = true;
         }
         //if (netScript.PlayerNumIsSet())
         //{
