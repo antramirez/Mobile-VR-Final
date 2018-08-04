@@ -30,11 +30,11 @@ public class PlayerController : NetworkBehaviour
 	void Update()
     {
 
-        if (netScript.PlayerNumIsSet())
-        {
-            playerNumber = netScript.GetPLayerNumber();
-            print(playerNumber);
-        }
+        //if (netScript.PlayerNumIsSet())
+        //{
+        //    playerNumber = netScript.GetPLayerNumber();
+        //    print(playerNumber);
+        //}
         // check to make sure the player is local
         if (!isLocalPlayer)
         {
