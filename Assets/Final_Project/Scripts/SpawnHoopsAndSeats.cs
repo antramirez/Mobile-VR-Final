@@ -67,7 +67,7 @@ public class SpawnHoopsAndSeats : NetworkBehaviour
             bball_hoop.transform.position = new Vector3(hoops_back, 0.95f, -2.8f);
             bball_hoop.transform.Rotate(0, 0, 0);
         }
-
+        /*
         for (int i = 0; i < 4; i++)
         {
             seats_left += 10.7f;
@@ -100,7 +100,7 @@ public class SpawnHoopsAndSeats : NetworkBehaviour
             seat.transform.position = new Vector3(seats_back, -1.0f, -9.5f);
             seat.transform.Rotate(0, 0, 0);
         }
-        /*
+
         for (int i = 0; i < 15; i++)
         {
             audience_pos_x = -17.3f;
