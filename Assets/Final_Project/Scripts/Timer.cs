@@ -12,6 +12,7 @@ public class Timer : NetworkBehaviour
 
 	// Use this for initialization
 	void Start () {
+        timerText.text = "Time Left";
         time = 90f;
         timeLeft = Time.time + 90f;
         timerText.color = Color.white;
