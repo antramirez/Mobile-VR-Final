@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 114653808170444506}
   - component: {fileID: 114565657545089950}
   m_Layer: 5
-  m_Name: Healthbar Canvas
+  m_Name: Scoreboard Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -591,6 +591,7 @@ MonoBehaviour:
   speed: 5
   accel_decel: 1
   score: 0
+  shotScript: {fileID: 1815071531743244, guid: 3fa2009f33ae840bbac1b53f7375cc62, type: 2}
   networkGameObj: {fileID: 1958177245723508, guid: 4d963bc074fbb4c8f80500cc48099d3e,
     type: 2}
   playerNumber: 0
@@ -1404,9 +1405,9 @@ RectTransform:
   m_Father: {fileID: 224144042825661144}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475, y: 225}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 220, y: -70}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224716469839181068

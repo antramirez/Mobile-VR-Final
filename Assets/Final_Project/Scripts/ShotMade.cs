@@ -14,6 +14,24 @@ public class ShotMade : NetworkBehaviour
     public bool shotgood = false;
     public int count;
 
+
+    //private GameState gsScript;
+    //public GameObject gsGO;
+
+    //private PlayerController pcScript;
+    //public GameObject pcGO;
+
+    public void Start()
+    {
+        //gsScript = gsGO.GetComponent<GameState>();
+        //pcScript = pcGO.GetComponent<PlayerController>();
+
+  //      print("gsScript says you are host " + pcScript.GetHost());
+    }
+    public void Update()
+    {
+        //print("psScript says you are host " + pcScript.GetHost());
+    }
     public void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "BallCollider")
@@ -27,6 +45,19 @@ public class ShotMade : NetworkBehaviour
             Destroy(col.transform.parent.gameObject, 3);
             //count++;
             print("BUCKETS");
+
+            //if (pcScript.GetHost())
+            //{
+            //    gsScript.UpdateP1Score();
+            //}
+            //else if (pcScript.GetClient())
+            //{
+            //    gsScript.UpdateP2Score();
+            //}
+            //else 
+            //{
+            //    print("FUCK");
+            //}
         }
     }
 
