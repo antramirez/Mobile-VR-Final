@@ -469,7 +469,7 @@ public class PlayerController : NetworkBehaviour
             {
                 force = 610f;
             }
-            //print(force);
+            print(force);
         }
 
 
