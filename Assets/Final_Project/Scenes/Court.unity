@@ -1057,11 +1057,8 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
-  score: 0
-  shotScript: {fileID: 0}
-  networkGameObj: {fileID: 0}
-  playerNumber: 0
-  gsGameObject: {fileID: 0}
+  gs: {fileID: 0}
+  playerId: 0
 --- !u!114 &563342884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,11 +1745,8 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
-  score: 0
-  shotScript: {fileID: 0}
-  networkGameObj: {fileID: 0}
-  playerNumber: 0
-  gsGameObject: {fileID: 0}
+  gs: {fileID: 0}
+  playerId: 0
 --- !u!114 &811480473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,11 +1992,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 842267189}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &877996863 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1925077697520956, guid: 4b2f0acde1fec436ebf47c1a1192b0f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 776895711}
 --- !u!1 &880182725
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,11 +4297,8 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
-  score: 0
-  shotScript: {fileID: 0}
-  networkGameObj: {fileID: 0}
-  playerNumber: 0
-  gsGameObject: {fileID: 0}
+  gs: {fileID: 0}
+  playerId: 0
 --- !u!114 &1631867137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5165,11 +5151,8 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
-  score: 0
-  shotScript: {fileID: 1815071531743244, guid: 3fa2009f33ae840bbac1b53f7375cc62, type: 2}
-  networkGameObj: {fileID: 1239261709}
-  playerNumber: 0
-  gsGameObject: {fileID: 877996863}
+  gs: {fileID: 0}
+  playerId: 0
 --- !u!114 &1971965226
 MonoBehaviour:
   m_ObjectHideFlags: 0

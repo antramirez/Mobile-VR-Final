@@ -144,7 +144,7 @@ public class GameState : NetworkBehaviour
     {
         base.OnStartServer();
 
-        players.Add(999);  // add dummy 0th player to score list: this is just for debugging
+        //players.Add(999);  // add dummy 0th player to score list: this is just for debugging
 
     }
 

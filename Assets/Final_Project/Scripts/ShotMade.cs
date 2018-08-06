@@ -44,7 +44,7 @@ public class ShotMade : NetworkBehaviour
             col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
             Destroy(col.transform.parent.gameObject, 3);
             //count++;
-            print("BUCKETS");
+            //print("BUCKETS");
 
             //if (pcScript.GetHost())
             //{

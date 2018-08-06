@@ -332,11 +332,13 @@ public class PlayerController : NetworkBehaviour
             return;
         }
 
-            float horiz = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-            float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+        float horiz = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-            transform.Translate(new Vector3(horiz, vert, 0f));
+        transform.Translate(new Vector3(horiz, vert, 0f));
 
+        if (playerId == 1) 
+        {
             if ((Camera.main.transform.localEulerAngles.y > 15f && Camera.main.transform.localEulerAngles.y <= 40f))
             {
                 force = 610f;
@@ -398,39 +400,109 @@ public class PlayerController : NetworkBehaviour
                 force = 570f;
             }
             //print(force);
-
-            // position the camera just above the first person player
-            Camera.main.transform.parent.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
-            // allow the player to rotate left and right based on head movement
-            transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
-            transform.GetChild(1).position = new Vector3(transform.GetChild(1).position.x, -Camera.main.transform.rotation.x*1.2f+1, transform.GetChild(1).position.z);
-            transform.GetChild(2).position = new Vector3(transform.GetChild(2).position.x, -Camera.main.transform.rotation.x*1.2f+1, transform.GetChild(2).position.z);
-            // have the player moving forward at a constant slow speed so all they have to worry about is shooting
-            //transform.position += transform.forward * 2f * Time.deltaTime;
-
-            // fire the bullet when the trigger is pressed
-            if (Input.GetMouseButtonDown(0))
-            {
-                CmdFire();
-            }
-
-
-          
         }
-
-        // This [Command] code is called on the Client …
-        // … but it is run on the Server!
-        [Command]
-        void CmdFire()
+        else if (playerId == 2)
         {
-            // instantitate the ball and shoot it from the camera
-            shot = Instantiate(ball, pos.position, pos.rotation);
-            //shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            // make it act as a rigidbody
-            Rigidbody body = shot.GetComponent<Rigidbody>();
-            // shoot it with the given direction, force, and speed
-            body.AddForce((transform.forward + transform.up) / 2f * force * accel_decel);
-            NetworkServer.Spawn(shot);
-            Destroy(shot, 4f);
+            if ((Camera.main.transform.localEulerAngles.y > 5f && Camera.main.transform.localEulerAngles.y <= 35f))
+            {
+                force = 610f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 35f && Camera.main.transform.localEulerAngles.y <= 55f))
+            {
+                force = 710f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 55f && Camera.main.transform.localEulerAngles.y <= 80f))
+            {
+                force = 760f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 80f && Camera.main.transform.localEulerAngles.y <= 100f))
+            {
+                force = 750f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 100f && Camera.main.transform.localEulerAngles.y <= 120f))
+            {
+                force = 760f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 120f && Camera.main.transform.localEulerAngles.y <= 140f))
+            {
+                force = 710f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 140f && Camera.main.transform.localEulerAngles.y <= 170f))
+            {
+                force = 610f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 170f && Camera.main.transform.localEulerAngles.y <= 205f))
+            {
+                force = 610f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 205f && Camera.main.transform.localEulerAngles.y <= 230f))
+            {
+                force = 670f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 230f && Camera.main.transform.localEulerAngles.y <= 245f))
+            {
+                force = 780f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 245f && Camera.main.transform.localEulerAngles.y <= 260f))
+            {
+                force = 830f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 260f && Camera.main.transform.localEulerAngles.y <= 280f))
+            {
+                force = 815f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 280f && Camera.main.transform.localEulerAngles.y <= 295f))
+            {
+                force = 830f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 295f && Camera.main.transform.localEulerAngles.y <= 310f))
+            {
+                force = 780f;
+            }
+            else if ((Camera.main.transform.localEulerAngles.y > 310f && Camera.main.transform.localEulerAngles.y <= 335f))
+            {
+                force = 670f;
+            }
+            else
+            {
+                force = 610f;
+            }
+            //print(force);
         }
+
+
+        // position the camera just above the first person player
+        Camera.main.transform.parent.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+        // allow the player to rotate left and right based on head movement
+        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
+        transform.GetChild(1).position = new Vector3(transform.GetChild(1).position.x, -Camera.main.transform.rotation.x*1.2f+1, transform.GetChild(1).position.z);
+        transform.GetChild(2).position = new Vector3(transform.GetChild(2).position.x, -Camera.main.transform.rotation.x*1.2f+1, transform.GetChild(2).position.z);
+        // have the player moving forward at a constant slow speed so all they have to worry about is shooting
+        //transform.position += transform.forward * 2f * Time.deltaTime;
+
+        // fire the bullet when the trigger is pressed
+        if (Input.GetMouseButtonDown(0))
+        {
+            CmdFire();
+        }
+
+
+      
+    }
+
+    // This [Command] code is called on the Client …
+    // … but it is run on the Server!
+    [Command]
+    void CmdFire()
+    {
+        // instantitate the ball and shoot it from the camera
+        shot = Instantiate(ball, pos.position, pos.rotation);
+        //shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        // make it act as a rigidbody
+        Rigidbody body = shot.GetComponent<Rigidbody>();
+        // shoot it with the given direction, force, and speed
+        body.AddForce((transform.forward + transform.up) / 2f * force * accel_decel);
+        NetworkServer.Spawn(shot);
+        Destroy(shot, 4f);
+    }
 }
