@@ -339,6 +339,7 @@ public class PlayerController : NetworkBehaviour
         print("Current id " + playerId);
         if (playerId == 1) 
         {
+            print("hello");
             if ((Camera.main.transform.localEulerAngles.y > 15f && Camera.main.transform.localEulerAngles.y <= 40f))
             {
                 force = 610f;
@@ -403,6 +404,7 @@ public class PlayerController : NetworkBehaviour
         }
         else if (playerId == 2)
         {
+            print("hi");
             if ((Camera.main.transform.localEulerAngles.y > 5f && Camera.main.transform.localEulerAngles.y <= 35f))
             {
                 force = 610f;
