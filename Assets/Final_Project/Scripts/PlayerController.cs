@@ -336,7 +336,7 @@ public class PlayerController : NetworkBehaviour
         float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
         transform.Translate(new Vector3(horiz, vert, 0f));
-
+        print("Current id " + playerId);
         if (playerId == 1) 
         {
             if ((Camera.main.transform.localEulerAngles.y > 15f && Camera.main.transform.localEulerAngles.y <= 40f))
