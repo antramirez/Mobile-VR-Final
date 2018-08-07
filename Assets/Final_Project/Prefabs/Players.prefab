@@ -590,7 +590,7 @@ MonoBehaviour:
   force: 650
   speed: 5
   accel_decel: 1
-  gsState: {fileID: 114652410320990788, guid: 4b2f0acde1fec436ebf47c1a1192b0f2, type: 2}
+  gsState: {fileID: 0}
   playerId: 0
 --- !u!114 &114191849451914220
 MonoBehaviour:
