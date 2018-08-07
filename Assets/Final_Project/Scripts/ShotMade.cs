@@ -11,37 +11,42 @@ public class ShotMade : NetworkBehaviour
     public GameObject noise;
     GameObject explode;
     GameObject crowd;
+    public PlayerController pc;
+    public GameState gs;
     [SyncVar]
-    public bool shotgood = false;
-    public int score;
+    public int pid;
 
-    public GameState gsState;
-
-    public override void OnStartLocalPlayer()
+    public void Start()
     {
-        while (gsState == null)
+        GameObject temp = GameObject.Find("PlayerController");
+
+        while (temp != null)
         {
-            GameObject temp = GameObject.Find("GameState");
-            if (temp != null)
-                gsState = temp.GetComponent<GameState>();
+            pc = transform.parent.GetComponent<PlayerController>();
         }
+
+        GameObject temp2 = GameObject.Find("GameState");
+        if (temp2 != null)
+            gs = temp2.GetComponent<GameState>();
     }
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "BallCollider")
+        if (isServer)
         {
-            crowd = Instantiate(noise);
-            Destroy(crowd, 2);
-            shotgood = true;
-            explode = Instantiate(explosion);
-            explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y+.275f, col.transform.position.z+.5f);
-          //  Destroy(ball);
-            Destroy(explode, 2);
-            col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
-            Destroy(col.transform.parent.gameObject, 3);
-            //gsState.players[0] = gsState.p1score + 1;
-            //print("BUCKETS");
+            if (col.gameObject.name == "BallCollider")
+            {
+                crowd = Instantiate(noise);
+                Destroy(crowd, 2);
+                explode = Instantiate(explosion);
+                explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
+                //  Destroy(ball);
+                Destroy(explode, 2);
+                col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+                Destroy(col.transform.parent.gameObject, 3);
+                print("player id that just shot: " + pid);
+                gs.UpdateScore(pid);
+            }   
         }
     }
 }

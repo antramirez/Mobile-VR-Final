@@ -5,7 +5,6 @@ using UnityEngine.Networking;
 
 public class PlayerController : NetworkBehaviour
 {
-
     public GameObject ball;
     public Transform pos;
     GameObject shot;
@@ -14,22 +13,15 @@ public class PlayerController : NetworkBehaviour
     public float accel_decel = 1f;
 
     public GameState gsState;
-    //private Timer tScript;
 
     [SyncVar(hook = "OnPlayerIdChange")]
     public int playerId;
-
-	void Start()
-	{
-        //print(gsState.players[0]);
-	}
 
 	void OnPlayerIdChange(int id)
     {
         playerId = id;
         Debug.Log("Player id set on player " + playerId);
     }
-
 
     public override void OnStartServer()
     {
@@ -50,17 +42,7 @@ public class PlayerController : NetworkBehaviour
     {
         base.OnStartClient();
         Debug.Log("Client non-local player started with id: " + playerId);
-        /*
-        while (gsState == null)
-        {
-            GameObject temp = GameObject.Find("Game Manager");
-            if (temp != null)
-                gsState = temp.GetComponent<GameState>();
-        }
-        */
     }
-
-
 
     public override void OnStartLocalPlayer()
     {
@@ -93,33 +75,10 @@ public class PlayerController : NetworkBehaviour
 
         // Here I am letting the server send the new value via the syncvar
         playerId = gsState.lastPlayerId;
-
-        // Alternately I can call an Rpc method on the client and send it the player id
-        //            RpcSetId(gameManager.lastPlayerId);
     }
 
     void Update()
     {
-        ////print("There are currently " + gsScript.NumPlayers() + " players");
-        //if (gsScript.NumPlayers() > 0 && gsScript.NumPlayers() < 2){
-        //  //  print("YOU ARE PLAYER 1");
-        //    host = true;
-        //    client = false;
-        //    print("You are host: " + host);
-        //}
-        //else if (gsScript.NumPlayers() > 1)
-        //{
-        //  //  print("YOU ARE PLAYER 2");
-        //    host = false;
-        //    client = true;
-        //    print("You are client: " + client);
-        //}
-        ////if (netScript.PlayerNumIsSet())
-        ////{
-        ////    playerNumber = netScript.GetPLayerNumber();
-        ////    print(playerNumber);
-        ////}
-        //// check to make sure the player is local
         if (!isLocalPlayer)
         {
             return;
@@ -130,18 +89,7 @@ public class PlayerController : NetworkBehaviour
         transform.Rotate(0, horiz, 0);
         if (gsState.lastPlayerId == 2)
         {
-            
-
-            //transform.Translate(new Vector3(horiz, vert, 0f));
             print("Current id " + playerId);
-            //if (playerId == 2)
-            //{
-            //    tScript.Starter(1);
-            //}
-            //else
-            //{
-            //    tScript.Starter(0);
-            //}
 
             if (playerId == 1)
             {
@@ -209,7 +157,6 @@ public class PlayerController : NetworkBehaviour
             }
             else if (playerId == 2)
             {
-                print("hi");
                 if ((Camera.main.transform.localEulerAngles.y > 0f && Camera.main.transform.localEulerAngles.y <= 15f))
                 {
                     force = 630f;
@@ -278,9 +225,8 @@ public class PlayerController : NetworkBehaviour
                 {
                     force = 630f;
                 }
-                print(force);
+                //print(force);
             }
-
 
             // position the camera just above the first person player
             Camera.main.transform.parent.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
@@ -289,32 +235,30 @@ public class PlayerController : NetworkBehaviour
             transform.GetChild(1).position = new Vector3(transform.GetChild(1).position.x, -Camera.main.transform.rotation.x * 1.2f + 1, transform.GetChild(1).position.z);
             transform.GetChild(2).position = new Vector3(transform.GetChild(2).position.x, -Camera.main.transform.rotation.x * 1.2f + 1, transform.GetChild(2).position.z);
             // have the player moving forward at a constant slow speed so all they have to worry about is shooting
-            //transform.position += transform.forward * 2f * Time.deltaTime;
 
             // fire the bullet when the trigger is pressed
             if (Input.GetMouseButtonDown(0))
             {
-                print("force = " + force);
-                CmdFire(force);
+                //print("force = " + force);
+                CmdFire(force, playerId);
             }
         }
-
-      
     }
 
     // This [Command] code is called on the Client …
     // … but it is run on the Server!
     [Command]
-    void CmdFire(float f)
+    void CmdFire(float f, int id)
     {
         shot = Instantiate(ball, pos.position, pos.rotation);
         //shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         // make it act as a rigidbody
-        print("Player id: " + playerId);
-        print("cmdFire Force: " + force);
+        //print("Player id: " + playerId);
+        //print("cmdFire Force: " + force);
         Rigidbody body = shot.GetComponent<Rigidbody>();
         // shoot it with the given direction, force, and speed
         body.AddForce((transform.forward + transform.up) / 2f * f * accel_decel);
+        shot.GetComponent<ShotMade>().pid = id;
         NetworkServer.Spawn(shot);
         Destroy(shot, 4f);
     }

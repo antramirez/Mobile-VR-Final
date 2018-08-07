@@ -211,7 +211,7 @@ eca6588934e978a74735e6737af683a8 Assembly-CSharp.dll:.GvrReticlePointer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp.dll:UnityStandardAssets.Utility.FollowTarget
 2a13deadfd379d1bb4ab0ebd2c20ca7e Assembly-CSharp.dll:.GvrLaserVisual
-0002d18a0efad132dd014dfd6a9dcdc0 Assembly-CSharp.dll:.ShotMade
+1fb18e70463975ce49207dd972d38242 Assembly-CSharp.dll:.ShotMade
 24f6a3eb1c9b232bcf23fbcef06cdf98 Assembly-CSharp.dll:.GvrControllerVisual
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 0ad469aca31264c6140b1e503c43ab6b Assembly-CSharp.dll:UnityStandardAssets.Utility.TimedObjectDestructor
