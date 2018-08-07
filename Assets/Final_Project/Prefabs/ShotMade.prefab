@@ -88,5 +88,6 @@ MonoBehaviour:
   ballCollider: {fileID: 1965039851049944, guid: 74003577ad3f14a27965372dae0e2a0f,
     type: 2}
   explosion: {fileID: 1045886108852078, guid: 818be7ebb861e4beba51e85dbe8f9f02, type: 2}
+  noise: {fileID: 1154347913671756, guid: 7e7f55576d7d64b23a0caf5e0db584c4, type: 2}
   shotgood: 0
   count: 0

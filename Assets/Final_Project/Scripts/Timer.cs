@@ -21,10 +21,6 @@ public class Timer : NetworkBehaviour
         time = 90.1f;
         timeLeft = 90.1f;
         timerText.color = Color.white;
-        if (gsState.lastPlayerId == 2)
-        {
-            InvokeRepeating("CountDown", .3f, .1f);   
-        }
 	}
 
     public override void OnStartLocalPlayer()
@@ -37,15 +33,15 @@ public class Timer : NetworkBehaviour
         }
     }
 	
-	//// Update is called once per frame
-	//void Update () 
- //   {
- //       if (gsState.lastPlayerId == 2 && count == 0)
- //       {
- //           count++;
- //           InvokeRepeating("CountDown", .3f, .1f);
- //       }
-	//}
+	// Update is called once per frame
+	void Update () 
+    {
+        if (gsState.lastPlayerId == 2 && count == 0)
+        {
+            count++;
+            InvokeRepeating("CountDown", .3f, .1f);
+        }
+	}
 
     public void CountDown()
     {
