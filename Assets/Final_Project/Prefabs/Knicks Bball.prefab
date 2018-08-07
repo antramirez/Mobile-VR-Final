@@ -152,7 +152,9 @@ MonoBehaviour:
   explosion: {fileID: 1045886108852078, guid: 818be7ebb861e4beba51e85dbe8f9f02, type: 2}
   noise: {fileID: 1154347913671756, guid: 7e7f55576d7d64b23a0caf5e0db584c4, type: 2}
   shotgood: 0
-  count: 0
+  score: 0
+  gsState: {fileID: 114652410320990788, guid: 4b2f0acde1fec436ebf47c1a1192b0f2, type: 2}
+  pc: {fileID: 114431293898136224, guid: 7d267b1c09bb145f88bde3661aa1db72, type: 2}
 --- !u!114 &114857998437656160
 MonoBehaviour:
   m_ObjectHideFlags: 1

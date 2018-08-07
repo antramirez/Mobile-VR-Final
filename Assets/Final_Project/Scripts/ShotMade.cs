@@ -5,7 +5,6 @@ using UnityEngine.Networking;
 
 public class ShotMade : NetworkBehaviour
 {
-
     public GameObject ball;
     public GameObject ballCollider;
     public GameObject explosion;
@@ -14,26 +13,20 @@ public class ShotMade : NetworkBehaviour
     GameObject crowd;
     [SyncVar]
     public bool shotgood = false;
-    public int count;
+    public int score;
 
+    public GameState gsState;
 
-    //private GameState gsScript;
-    //public GameObject gsGO;
-
-    //private PlayerController pcScript;
-    //public GameObject pcGO;
-
-    public void Start()
+    public override void OnStartLocalPlayer()
     {
-        //gsScript = gsGO.GetComponent<GameState>();
-        //pcScript = pcGO.GetComponent<PlayerController>();
+        while (gsState == null)
+        {
+            GameObject temp = GameObject.Find("GameState");
+            if (temp != null)
+                gsState = temp.GetComponent<GameState>();
+        }
+    }
 
-  //      print("gsScript says you are host " + pcScript.GetHost());
-    }
-    public void Update()
-    {
-        //print("psScript says you are host " + pcScript.GetHost());
-    }
     public void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "BallCollider")
@@ -47,26 +40,8 @@ public class ShotMade : NetworkBehaviour
             Destroy(explode, 2);
             col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
             Destroy(col.transform.parent.gameObject, 3);
-            //count++;
+            //gsState.players[0] = gsState.p1score + 1;
             //print("BUCKETS");
-
-            //if (pcScript.GetHost())
-            //{
-            //    gsScript.UpdateP1Score();
-            //}
-            //else if (pcScript.GetClient())
-            //{
-            //    gsScript.UpdateP2Score();
-            //}
-            //else 
-            //{
-            //    print("FUCK");
-            //}
         }
-    }
-
-    public bool ShotGood()
-    {
-        return shotgood;
     }
 }

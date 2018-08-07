@@ -9,7 +9,7 @@ public class PlayerController : NetworkBehaviour
     public GameObject ball;
     public Transform pos;
     GameObject shot;
-    public float force = 570f;
+    public float force = 560f;
     public float speed = 5f;
     public float accel_decel = 1f;
 
@@ -21,7 +21,7 @@ public class PlayerController : NetworkBehaviour
 
 	void Start()
 	{
-        //tScript = GameObject.Find("Players").GetComponent<Timer>();
+        //print(gsState.players[0]);
 	}
 
 	void OnPlayerIdChange(int id)
@@ -124,12 +124,15 @@ public class PlayerController : NetworkBehaviour
         {
             return;
         }
+        float horiz = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+
+        transform.Rotate(0, horiz, 0);
         if (gsState.lastPlayerId == 2)
         {
-            float horiz = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-            float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+            
 
-            transform.Translate(new Vector3(horiz, vert, 0f));
+            //transform.Translate(new Vector3(horiz, vert, 0f));
             print("Current id " + playerId);
             //if (playerId == 2)
             //{
@@ -142,7 +145,6 @@ public class PlayerController : NetworkBehaviour
 
             if (playerId == 1)
             {
-                print("hello");
                 if ((Camera.main.transform.localEulerAngles.y > 15f && Camera.main.transform.localEulerAngles.y <= 40f))
                 {
                     force = 610f;
@@ -201,76 +203,80 @@ public class PlayerController : NetworkBehaviour
                 }
                 else
                 {
-                    force = 570f;
+                    force = 560f;
                 }
                 //print(force);
             }
             else if (playerId == 2)
             {
                 print("hi");
-                if ((Camera.main.transform.localEulerAngles.y > 5f && Camera.main.transform.localEulerAngles.y <= 35f))
+                if ((Camera.main.transform.localEulerAngles.y > 0f && Camera.main.transform.localEulerAngles.y <= 15f))
                 {
-                    force = 610f;
+                    force = 630f;
                 }
-                else if ((Camera.main.transform.localEulerAngles.y > 35f && Camera.main.transform.localEulerAngles.y <= 55f))
-                {
-                    force = 710f;
-                }
-                else if ((Camera.main.transform.localEulerAngles.y > 55f && Camera.main.transform.localEulerAngles.y <= 80f))
-                {
-                    force = 760f;
-                }
-                else if ((Camera.main.transform.localEulerAngles.y > 80f && Camera.main.transform.localEulerAngles.y <= 100f))
-                {
-                    force = 750f;
-                }
-                else if ((Camera.main.transform.localEulerAngles.y > 100f && Camera.main.transform.localEulerAngles.y <= 120f))
-                {
-                    force = 760f;
-                }
-                else if ((Camera.main.transform.localEulerAngles.y > 120f && Camera.main.transform.localEulerAngles.y <= 140f))
-                {
-                    force = 710f;
-                }
-                else if ((Camera.main.transform.localEulerAngles.y > 140f && Camera.main.transform.localEulerAngles.y <= 170f))
-                {
-                    force = 610f;
-                }
-                else if ((Camera.main.transform.localEulerAngles.y > 170f && Camera.main.transform.localEulerAngles.y <= 205f))
-                {
-                    force = 610f;
-                }
-                else if ((Camera.main.transform.localEulerAngles.y > 205f && Camera.main.transform.localEulerAngles.y <= 230f))
+                else if ((Camera.main.transform.localEulerAngles.y > 15f && Camera.main.transform.localEulerAngles.y <= 40f))
                 {
                     force = 670f;
                 }
-                else if ((Camera.main.transform.localEulerAngles.y > 230f && Camera.main.transform.localEulerAngles.y <= 245f))
+                else if ((Camera.main.transform.localEulerAngles.y > 40f && Camera.main.transform.localEulerAngles.y <= 55f))
                 {
-                    force = 780f;
+                    force = 770f;
                 }
-                else if ((Camera.main.transform.localEulerAngles.y > 245f && Camera.main.transform.localEulerAngles.y <= 260f))
+                else if ((Camera.main.transform.localEulerAngles.y > 55f && Camera.main.transform.localEulerAngles.y <= 75f))
                 {
-                    force = 830f;
+                    force = 810f;
                 }
-                else if ((Camera.main.transform.localEulerAngles.y > 260f && Camera.main.transform.localEulerAngles.y <= 280f))
+                else if ((Camera.main.transform.localEulerAngles.y > 75f && Camera.main.transform.localEulerAngles.y <= 95f))
                 {
-                    force = 815f;
+                    force = 790f;
                 }
-                else if ((Camera.main.transform.localEulerAngles.y > 280f && Camera.main.transform.localEulerAngles.y <= 295f))
+                else if ((Camera.main.transform.localEulerAngles.y > 95f && Camera.main.transform.localEulerAngles.y <= 115f))
                 {
-                    force = 830f;
+                    force = 790f;
                 }
-                else if ((Camera.main.transform.localEulerAngles.y > 295f && Camera.main.transform.localEulerAngles.y <= 310f))
+                else if ((Camera.main.transform.localEulerAngles.y > 115f && Camera.main.transform.localEulerAngles.y <= 130f))
                 {
-                    force = 780f;
+                    force = 720f;
                 }
-                else if ((Camera.main.transform.localEulerAngles.y > 310f && Camera.main.transform.localEulerAngles.y <= 335f))
+                else if ((Camera.main.transform.localEulerAngles.y > 130f && Camera.main.transform.localEulerAngles.y <= 160f))
+                {
+                    force = 610f;
+                }
+                else if ((Camera.main.transform.localEulerAngles.y > 160f && Camera.main.transform.localEulerAngles.y <= 200f))
+                {
+                    force = 560f;
+                }
+                else if ((Camera.main.transform.localEulerAngles.y > 200f && Camera.main.transform.localEulerAngles.y <= 225f))
+                {
+                    force = 610f;
+                }
+                else if ((Camera.main.transform.localEulerAngles.y > 225f && Camera.main.transform.localEulerAngles.y <= 245f))
+                {
+                    force = 720f;
+                }
+                else if ((Camera.main.transform.localEulerAngles.y > 245f && Camera.main.transform.localEulerAngles.y <= 265f))
+                {
+                    force = 790f;
+                }
+                else if ((Camera.main.transform.localEulerAngles.y > 265f && Camera.main.transform.localEulerAngles.y <= 285f))
+                {
+                    force = 790f;
+                }
+                else if ((Camera.main.transform.localEulerAngles.y > 285f && Camera.main.transform.localEulerAngles.y <= 305f))
+                {
+                    force = 810f;
+                }
+                else if ((Camera.main.transform.localEulerAngles.y > 305f && Camera.main.transform.localEulerAngles.y <= 320f))
+                {
+                    force = 770f;
+                }
+                else if ((Camera.main.transform.localEulerAngles.y > 320f && Camera.main.transform.localEulerAngles.y <= 335f))
                 {
                     force = 670f;
                 }
                 else
                 {
-                    force = 610f;
+                    force = 630f;
                 }
                 print(force);
             }
@@ -288,7 +294,8 @@ public class PlayerController : NetworkBehaviour
             // fire the bullet when the trigger is pressed
             if (Input.GetMouseButtonDown(0))
             {
-                CmdFire();
+                print("force = " + force);
+                CmdFire(force);
             }
         }
 
@@ -298,19 +305,17 @@ public class PlayerController : NetworkBehaviour
     // This [Command] code is called on the Client …
     // … but it is run on the Server!
     [Command]
-    void CmdFire()
+    void CmdFire(float f)
     {
-        //if (playerId == 2)
-        //{
-        // instantitate the ball and shoot it from the camera
         shot = Instantiate(ball, pos.position, pos.rotation);
         //shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         // make it act as a rigidbody
+        print("Player id: " + playerId);
+        print("cmdFire Force: " + force);
         Rigidbody body = shot.GetComponent<Rigidbody>();
         // shoot it with the given direction, force, and speed
-        body.AddForce((transform.forward + transform.up) / 2f * force * accel_decel);
+        body.AddForce((transform.forward + transform.up) / 2f * f * accel_decel);
         NetworkServer.Spawn(shot);
         Destroy(shot, 4f);
-        //}
     }
 }

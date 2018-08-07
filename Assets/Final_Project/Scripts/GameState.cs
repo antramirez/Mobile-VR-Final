@@ -136,10 +136,16 @@ public class GameState : NetworkBehaviour
     public int lastPlayerId = 0;
 
     public SyncListInt players = new SyncListInt();
+    [SyncVar]
+    public int p1score;
+    [SyncVar]
+    public int p2score;
 
     public override void OnStartServer()
     {
         base.OnStartServer();
+        p1score = 0;
+        p2score = 0;
     }
 
     // this increments lastPlayerId and adds an entry in the scoreboard array
