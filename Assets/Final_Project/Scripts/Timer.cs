@@ -9,18 +9,47 @@ public class Timer : NetworkBehaviour
     private float timeLeft;
     private bool gameOver = false;
     float time;
+    int count;
+    string sec;
+
+    public GameState gsState;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
         timerText.text = "Time Left";
-        time = 90f;
-        timeLeft = Time.time + 90f;
+        time = 90.1f;
+        timeLeft = 90.1f;
         timerText.color = Color.white;
+        if (gsState.lastPlayerId == 2)
+        {
+            InvokeRepeating("CountDown", .3f, .1f);   
+        }
 	}
+
+    public override void OnStartLocalPlayer()
+    {
+        while (gsState == null)
+        {
+            GameObject temp = GameObject.Find("GameState");
+            if (temp != null)
+                gsState = temp.GetComponent<GameState>();
+        }
+    }
 	
-	// Update is called once per frame
-	void Update () {
-        if (time <= 0f)
+	//// Update is called once per frame
+	//void Update () 
+ //   {
+ //       if (gsState.lastPlayerId == 2 && count == 0)
+ //       {
+ //           count++;
+ //           InvokeRepeating("CountDown", .3f, .1f);
+ //       }
+	//}
+
+    public void CountDown()
+    {
+        if (time <= .1f)
         {
             Finish();
         }
@@ -28,11 +57,17 @@ public class Timer : NetworkBehaviour
         {
             return;
         }
-        time = timeLeft - Time.time;
-        string sec = (time % 91).ToString("f1");
+        time = time - .1f;
+        if (time > 10f)
+        {
+            sec = (time % 91).ToString("f0");    
+        }
+        else
+        {
+            sec = (time % 91).ToString("f1");   
+        }
         timerText.text = sec;
-        //print(sec);
-	}
+    }
 
     public void Finish()
     {

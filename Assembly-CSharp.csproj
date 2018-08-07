@@ -231,10 +231,10 @@
     <None Include="Assets\ThirdParty\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\ThirdParty\GoogleVR\Plugins\Android\AndroidManifest-Cardboard.xml" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/Mobile-VR-Final/Mobile-VR-Final/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/davidkrauskopf-greene/Desktop/Mobile-VR-Final/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/Mobile-VR-Final/Mobile-VR-Final/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/davidkrauskopf-greene/Desktop/Mobile-VR-Final/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -426,7 +426,7 @@
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/Mobile-VR-Final/Mobile-VR-Final/Assets/ThirdParty/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>/Users/davidkrauskopf-greene/Desktop/Mobile-VR-Final/Assets/ThirdParty/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>/Users/davidkrauskopf-greene/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

@@ -132,20 +132,14 @@ using UnityEngine.Networking;
 
 public class GameState : NetworkBehaviour
 {
-
     [SyncVar]
     public int lastPlayerId = 0;
 
-
     public SyncListInt players = new SyncListInt();
-
 
     public override void OnStartServer()
     {
         base.OnStartServer();
-
-        //players.Add(999);  // add dummy 0th player to score list: this is just for debugging
-
     }
 
     // this increments lastPlayerId and adds an entry in the scoreboard array

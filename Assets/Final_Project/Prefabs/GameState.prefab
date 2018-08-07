@@ -84,6 +84,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097bc90186dea4662895ef640e539c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayers: 4
-  winner: 0
-  netGameObj: {fileID: 1958177245723508, guid: 4d963bc074fbb4c8f80500cc48099d3e, type: 2}
+  lastPlayerId: 0

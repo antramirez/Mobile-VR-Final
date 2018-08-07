@@ -9,7 +9,9 @@ public class ShotMade : NetworkBehaviour
     public GameObject ball;
     public GameObject ballCollider;
     public GameObject explosion;
+    public GameObject noise;
     GameObject explode;
+    GameObject crowd;
     [SyncVar]
     public bool shotgood = false;
     public int count;
@@ -36,6 +38,8 @@ public class ShotMade : NetworkBehaviour
     {
         if (col.gameObject.name == "BallCollider")
         {
+            crowd = Instantiate(noise);
+            Destroy(crowd, 2);
             shotgood = true;
             explode = Instantiate(explosion);
             explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y+.275f, col.transform.position.z+.5f);
