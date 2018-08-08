@@ -5,18 +5,23 @@ using UnityEngine.Networking;
 
 public class PlayerController : NetworkBehaviour
 {
+    // declare variables for the ball object and position to be shot from
     public GameObject ball;
     public Transform pos;
     GameObject shot;
+    // provide default forces for the ball when shot
     public float force = 560f;
     public float speed = 5f;
     public float accel_decel = 1f;
 
+    // get access to the game state script
     public GameState gsState;
 
+    // get a handle for the individual players
     [SyncVar(hook = "OnPlayerIdChange")]
     public int playerId;
 
+    // assign the players their ids
 	void OnPlayerIdChange(int id)
     {
         playerId = id;
@@ -25,8 +30,7 @@ public class PlayerController : NetworkBehaviour
     public override void OnStartServer()
     {
         base.OnStartServer();
-
-        // Wait until the Game Manager object spawns and then grab a handle to it
+        // Wait until the Game State object spawns and then grab a handle to it
         while (gsState == null)
         {
             GameObject temp = GameObject.Find("GameState");
@@ -48,7 +52,7 @@ public class PlayerController : NetworkBehaviour
         transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
         // make the local player blue
         GetComponent<Renderer>().material.color = Color.blue;
-
+        // Wait until the Game State object spawns and then grab a handle to it
         while (gsState == null)
         {
             GameObject temp = GameObject.Find("GameState");
@@ -72,13 +76,16 @@ public class PlayerController : NetworkBehaviour
 
     void Update()
     {
+        // return if the player is local
         if (!isLocalPlayer)
         {
             return;
         }
 
+        // don't allow the players to shoot or move if 2 players aren't playing or the time is up
         if (gsState.lastPlayerId == 2 && gsState.time >= .1f)
         {
+            // forces for player 1's shots based on their viewing angle
             if (playerId == 1)
             {
                 if ((Camera.main.transform.localEulerAngles.y > 15f && Camera.main.transform.localEulerAngles.y <= 40f))
@@ -142,6 +149,7 @@ public class PlayerController : NetworkBehaviour
                     force = 560f;
                 }
             }
+            // forces for player 2's shots based on their viewing angle
             else if (playerId == 2)
             {
                 if ((Camera.main.transform.localEulerAngles.y > 0f && Camera.main.transform.localEulerAngles.y <= 15f))
@@ -218,6 +226,7 @@ public class PlayerController : NetworkBehaviour
             Camera.main.transform.parent.position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
             // allow the player to rotate left and right based on head movement
             transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
+            // move the gun and shooting spawn position based on player movement to allow a degree of variability to the shots
             transform.GetChild(1).position = new Vector3(transform.GetChild(1).position.x, -Camera.main.transform.rotation.x * 1.2f + 1, transform.GetChild(1).position.z);
             transform.GetChild(2).position = new Vector3(transform.GetChild(2).position.x, -Camera.main.transform.rotation.x * 1.2f + 1, transform.GetChild(2).position.z);
 
@@ -234,13 +243,19 @@ public class PlayerController : NetworkBehaviour
     [Command]
     void CmdFire(float f, int id)
     {
+        // add to the total shots attempted for the player that took the shot
+        gsState.UpdateShotsAttempted(id);
+        // instantiate the ball to be shot
         shot = Instantiate(ball, pos.position, pos.rotation);
         // make it act as a rigidbody
         Rigidbody body = shot.GetComponent<Rigidbody>();
         // shoot it with the given direction, force, and speed
         body.AddForce((transform.forward + transform.up) / 2f * f * accel_decel);
+        // assign the components of the shot made script to the ball shot by the specific player
         shot.GetComponent<ShotMade>().pid = id;
+        // spawn the shot on the network
         NetworkServer.Spawn(shot);
+        // destroy the ball after 4 seconds
         Destroy(shot, 4f);
     }
 }

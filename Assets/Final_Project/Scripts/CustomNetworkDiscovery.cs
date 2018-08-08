@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class CustomNetworkDiscovery : NetworkDiscovery {
+public class CustomNetworkDiscovery : NetworkDiscovery 
+{
     private bool _receivedBradcast = false;
     float playernum;
     bool playNumSet;

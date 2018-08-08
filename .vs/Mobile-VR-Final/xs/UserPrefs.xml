@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{99F968E0-E654-E303-E174-C8F909206756}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Final_Project/Scripts/GameState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Final_Project/Scripts/SpawnHoops.cs">
     <Files>
-      <File FileName="Assets/Final_Project/Scripts/ShotMade.cs" Line="50" Column="14" />
-      <File FileName="Assets/Final_Project/Scripts/PlayerController.cs" Line="240" Column="62" />
-      <File FileName="Assets/Final_Project/Scripts/GameState.cs" Line="61" Column="11" />
+      <File FileName="Assets/Final_Project/Scripts/ShotMade.cs" Line="60" Column="10" />
+      <File FileName="Assets/Final_Project/Scripts/PlayerController.cs" Line="237" Column="42" />
+      <File FileName="Assets/Final_Project/Scripts/GameState.cs" Line="389" Column="19" />
+      <File FileName="Assets/Final_Project/Scripts/CustomNetworkDiscovery.cs" Line="55" Column="2" />
+      <File FileName="Assets/Final_Project/Scripts/SpawnHoops.cs" Line="6" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
