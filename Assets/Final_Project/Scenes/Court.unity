@@ -1647,7 +1647,8 @@ CanvasRenderer:
 --- !u!114 &766397457
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 114286959803923910, guid: b3baa198753c64308a2d1f1780c2c7fe,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 766397453}
   m_Enabled: 1

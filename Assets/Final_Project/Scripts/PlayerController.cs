@@ -83,10 +83,7 @@ public class PlayerController : NetworkBehaviour
         {
             return;
         }
-        float horiz = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        float vert = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-        transform.Rotate(0, horiz, 0);
         if (gsState.lastPlayerId == 2)
         {
             print("Current id " + playerId);

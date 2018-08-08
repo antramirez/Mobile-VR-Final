@@ -58,7 +58,7 @@ public class GameState : NetworkBehaviour
             InvokeRepeating("CountDown", .3f, .1f);
         }
 
-        print("updating time... : " + time);
+        //print("updating time... : " + time);
         totalScore = p1score + p2score;
         p1Text.text = "Player 1: " + p1score.ToString();
         p2Text.text = "Player 2: " + p2score.ToString();

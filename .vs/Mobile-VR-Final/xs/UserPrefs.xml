@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{99F968E0-E654-E303-E174-C8F909206756}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Final_Project/Scripts/Timer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Final_Project/Scripts/GameState.cs">
     <Files>
-      <File FileName="Assets/Final_Project/Scripts/ShotMade.cs" Line="28" Column="9" />
-      <File FileName="Assets/Final_Project/Scripts/PlayerController.cs" Line="15" Column="30" />
-      <File FileName="Assets/Final_Project/Scripts/Timer.cs" Line="10" Column="12" />
-      <File FileName="Assets/Final_Project/Scripts/GameState.cs" Line="43" Column="28" />
+      <File FileName="Assets/Final_Project/Scripts/ShotMade.cs" Line="45" Column="40" />
+      <File FileName="Assets/Final_Project/Scripts/PlayerController.cs" Line="87" Column="73" />
+      <File FileName="Assets/Final_Project/Scripts/Timer.cs" Line="73" Column="7" />
+      <File FileName="Assets/Final_Project/Scripts/GameState.cs" Line="71" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
