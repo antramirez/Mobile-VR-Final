@@ -32,12 +32,10 @@ public class ShotMade : NetworkBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        
         if (col.gameObject.name == "BallCollider")
         {
             if (isServer)
             {
-                //print("SERVER");
                 crowd = Instantiate(noise);
                 Destroy(crowd, 2);
                 explode = Instantiate(explosion);
@@ -46,10 +44,8 @@ public class ShotMade : NetworkBehaviour
                 Destroy(explode, 2);
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                 Destroy(col.transform.parent.gameObject, 3);
-                //print("player id that just shot: " + pid);
                 gs.UpdateScore(pid);
             }
-
             //if (isLocalPlayer)
             //{
             //    print("LOCAL");
@@ -60,7 +56,6 @@ public class ShotMade : NetworkBehaviour
             //}
             else
             {
-                //print("what am i?");  
                 crowd = Instantiate(noise);
                 Destroy(crowd, 2);
                 explode = Instantiate(explosion);

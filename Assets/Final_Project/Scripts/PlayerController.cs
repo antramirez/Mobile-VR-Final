@@ -20,13 +20,11 @@ public class PlayerController : NetworkBehaviour
 	void OnPlayerIdChange(int id)
     {
         playerId = id;
-        Debug.Log("Player id set on player " + playerId);
     }
 
     public override void OnStartServer()
     {
         base.OnStartServer();
-        Debug.Log("Get GameManager on Server");
 
         // Wait until the Game Manager object spawns and then grab a handle to it
         while (gsState == null)
@@ -35,13 +33,11 @@ public class PlayerController : NetworkBehaviour
             if (temp != null)
                 gsState = temp.GetComponent<GameState>();
         }
-
     }
 
     public override void OnStartClient()
     {
         base.OnStartClient();
-        Debug.Log("Client non-local player started with id: " + playerId);
     }
 
     public override void OnStartLocalPlayer()
@@ -53,7 +49,6 @@ public class PlayerController : NetworkBehaviour
         // make the local player blue
         GetComponent<Renderer>().material.color = Color.blue;
 
-        Debug.Log("Get GameState on Player");
         while (gsState == null)
         {
             GameObject temp = GameObject.Find("GameState");
@@ -65,14 +60,12 @@ public class PlayerController : NetworkBehaviour
         CmdIncrPlayerId();
     }
 
-
     // This Increments the player count on the server
     [Command]
     void CmdIncrPlayerId()
     {
-        Debug.Log("New Player Joined");
-        gsState.AddNewPlayer();   // this increments lastPlayerId and adds an entry in the scoreboard array
-
+        // this increments lastPlayerId and adds an entry in the scoreboard array
+        gsState.AddNewPlayer();   
         // Here I am letting the server send the new value via the syncvar
         playerId = gsState.lastPlayerId;
     }
@@ -84,10 +77,8 @@ public class PlayerController : NetworkBehaviour
             return;
         }
 
-        if (gsState.lastPlayerId == 2)
+        if (gsState.lastPlayerId == 2 && gsState.time >= .1f)
         {
-            print("Current id " + playerId);
-
             if (playerId == 1)
             {
                 if ((Camera.main.transform.localEulerAngles.y > 15f && Camera.main.transform.localEulerAngles.y <= 40f))
@@ -150,7 +141,6 @@ public class PlayerController : NetworkBehaviour
                 {
                     force = 560f;
                 }
-                //print(force);
             }
             else if (playerId == 2)
             {
@@ -222,7 +212,6 @@ public class PlayerController : NetworkBehaviour
                 {
                     force = 630f;
                 }
-                //print(force);
             }
 
             // position the camera just above the first person player
@@ -231,12 +220,10 @@ public class PlayerController : NetworkBehaviour
             transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
             transform.GetChild(1).position = new Vector3(transform.GetChild(1).position.x, -Camera.main.transform.rotation.x * 1.2f + 1, transform.GetChild(1).position.z);
             transform.GetChild(2).position = new Vector3(transform.GetChild(2).position.x, -Camera.main.transform.rotation.x * 1.2f + 1, transform.GetChild(2).position.z);
-            // have the player moving forward at a constant slow speed so all they have to worry about is shooting
 
-            // fire the bullet when the trigger is pressed
+            // shoot the ball when the trigger is pressed
             if (Input.GetMouseButtonDown(0))
             {
-                //print("force = " + force);
                 CmdFire(force, playerId);
             }
         }
@@ -248,10 +235,7 @@ public class PlayerController : NetworkBehaviour
     void CmdFire(float f, int id)
     {
         shot = Instantiate(ball, pos.position, pos.rotation);
-        //shot.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         // make it act as a rigidbody
-        //print("Player id: " + playerId);
-        //print("cmdFire Force: " + force);
         Rigidbody body = shot.GetComponent<Rigidbody>();
         // shoot it with the given direction, force, and speed
         body.AddForce((transform.forward + transform.up) / 2f * f * accel_decel);

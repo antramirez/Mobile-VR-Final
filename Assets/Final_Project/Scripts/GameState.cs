@@ -18,9 +18,7 @@ public class GameState : NetworkBehaviour
 
     [SyncVar]
     public int totalScore;
-    //[SyncVar]
     public Text p1Text;
-    //[SyncVar]
     public Text p2Text;
   
     public Text timerText;
@@ -47,7 +45,6 @@ public class GameState : NetworkBehaviour
             timerText.text = "Time Left";
             timerText.color = Color.white;
             time = 90.1f;
-            print("starting time: " + time);
         }
 	}
 	public void Update()
@@ -58,20 +55,15 @@ public class GameState : NetworkBehaviour
             InvokeRepeating("CountDown", .3f, .1f);
         }
 
-        //print("updating time... : " + time);
         totalScore = p1score + p2score;
         p1Text.text = "Player 1: " + p1score.ToString();
         p2Text.text = "Player 2: " + p2score.ToString();
 
-        // check if timer is up
+        // check if timer is up and if there is a winner or tie
         if (time <= .1f)
         {
-            //TODO
-            // END GAME
             if (p1score == p2score)
             {
-                //TODO
-                //settle tie
                 p1Text.text = "Player 1: TIE GAME";
                 p2Text.text = "Player 2: TIE GAME";
             }
@@ -90,16 +82,11 @@ public class GameState : NetworkBehaviour
             }
         }
 
-            // determine winner/tie
-
+        // check if all the baskets were made and if there is a winner or if there is a tie
         if (totalScore >= 16)
         {
-            //TODO
-            // END GAME
             if (p1score == 8 && p2score == 8)
             {
-                //TODO
-                //settle tie
                 p1Text.text = "Player 1: TIE GAME";
                 p2Text.text = "Player 2: TIE GAME"; 
             }
@@ -117,8 +104,6 @@ public class GameState : NetworkBehaviour
                 }
             }
         }
-
-
 	}
 
 	// this increments lastPlayerId and adds an entry in the scoreboard array
@@ -127,7 +112,6 @@ public class GameState : NetworkBehaviour
     {
         lastPlayerId++;
         players.Add(0);
-        Debug.Log("Added new player: " + lastPlayerId + " now players len = " + players.Count);
     }
 
     public void UpdateScore(int id)
@@ -144,9 +128,7 @@ public class GameState : NetworkBehaviour
         {
             print("who?");
         }
-        print("player 1 score: " + p1score);
     }
-
 
     public void CountDown()
     {
@@ -168,7 +150,6 @@ public class GameState : NetworkBehaviour
             sec = (time % 91).ToString("f1");
         }
         timerText.text = sec;
-        print("countdown says... " + timerText.text);
     }
 
     public void Finish()
@@ -176,6 +157,10 @@ public class GameState : NetworkBehaviour
         gameover = true;
         timerText.color = Color.red;
         timerText.text = "Game Over";
+        var baskets = GameObject.FindGameObjectsWithTag("hoop");
+        foreach (var basket in baskets)
+        {
+            Destroy(basket);
+        }
     }
-   
 }
