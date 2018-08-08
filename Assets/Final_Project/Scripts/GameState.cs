@@ -168,6 +168,7 @@ public class GameState : NetworkBehaviour
             sec = (time % 91).ToString("f1");
         }
         timerText.text = sec;
+        print("countdown says... " + timerText.text);
     }
 
     public void Finish()
