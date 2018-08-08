@@ -85,3 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastPlayerId: 0
+  p1score: 0
+  p2score: 0
+  totalScore: 0
+  p1Text: {fileID: 0}
+  p2Text: {fileID: 0}
+  t: {fileID: 114049664532191470, guid: ca55de9907d33491cae1468293a1483d, type: 2}

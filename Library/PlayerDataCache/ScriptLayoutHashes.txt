@@ -19,7 +19,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 7c4009185d1e3bcf3491adeea097f83e Assembly-CSharp.dll:UnityStandardAssets.Characters.FirstPerson.FirstPersonController
-96c93075c6e0dd6958f6af553913647e Assembly-CSharp.dll:.GameState
+6188b1f243775ea99b43c3e5c0f44cc5 Assembly-CSharp.dll:.GameState
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EventSystemChecker
 228303069e44eb1f7f68e3c0519e6057 Assembly-CSharp.dll:.GvrVideoPlayerTexture
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -176,7 +176,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 72903e4446a2f2d54923b10a70b2c5ba Assembly-CSharp.dll:Gvr.Internal.InstantPreview
 2dbfd4f7836c7f6a79e17be5f4bf7969 Assembly-CSharp.dll:UnityStandardAssets.Utility.WaypointCircuit
-f304953aa0a31e8de4422386bacc5b88 Assembly-CSharp.dll:.Timer
+32e32f4f2608c10d70dbe943c857880b Assembly-CSharp.dll:.Timer
 1c952386af3ef6bd3c90a34c4fd12f6b Assembly-CSharp.dll:GoogleVR.HelloVR.ObjectController
 60ade6aa5619663d6e9ca7c5523d4a4a Assembly-CSharp.dll:UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GvrControllerTooltipsSimple

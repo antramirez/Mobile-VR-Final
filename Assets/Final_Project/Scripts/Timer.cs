@@ -6,9 +6,8 @@ using UnityEngine.Networking;
 public class Timer : NetworkBehaviour 
 {
     public Text timerText;
-    private float timeLeft;
     private bool gameOver = false;
-    float time;
+    public float time = 90.1f;
     int count;
     string sec;
 
@@ -18,8 +17,7 @@ public class Timer : NetworkBehaviour
 	void Start () 
     {
         timerText.text = "Time Left";
-        time = 90.1f;
-        timeLeft = 90.1f;
+        //time = 90.1f;
         timerText.color = Color.white;
 	}
 

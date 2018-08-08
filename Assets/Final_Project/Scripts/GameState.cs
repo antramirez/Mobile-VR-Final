@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class GameState : NetworkBehaviour
 {
@@ -15,16 +16,101 @@ public class GameState : NetworkBehaviour
     [SyncVar]
     public int p2score;
 
+    [SyncVar]
+    public int totalScore;
+    //[SyncVar]
+    public Text p1Text;
+    //[SyncVar]
+    public Text p2Text;
+  
+    public Timer t;
+
     public override void OnStartServer()
     {
         base.OnStartServer();
         p1score = 0;
         p2score = 0;
+        totalScore = p1score + p2score;
+        p1Text.text = "Player 1: " + p1score.ToString();
+        p2Text.text = "Player 2: " + p2score.ToString();
     }
+	public void Start()
+	{
+        GameObject temp = GameObject.Find("Timer");
+        if (temp == null)
+        {
+            t = temp.GetComponent<Timer>();
+            t.time = 90.1f;
+        }
+        print("the time is " + t.time);
+	}
+	public void Update()
+	{
+        totalScore = p1score + p2score;
+        p1Text.text = "Player 1: " + p1score.ToString();
+        p2Text.text = "Player 2: " + p2score.ToString();
 
-    // this increments lastPlayerId and adds an entry in the scoreboard array
-    // this is called from a Command by the player, so it runs as server
-    public void AddNewPlayer()
+        // check if timer is up
+        if (t.time <= .1f)
+        {
+            //TODO
+            // END GAME
+            if (p1score == 8 && p2score == 8)
+            {
+                //TODO
+                //settle tie
+                p1Text.text = "Player 1: TIE GAME";
+                p2Text.text = "Player 2: TIE GAME";
+            }
+            else
+            {
+                if (p1score > p2score)
+                {
+                    p1Text.text = "Player 1: YOU WIN";
+                    p2Text.text = "Player 2: YOU LOSE";
+                }
+                else
+                {
+                    p1Text.text = "Player 1: YOU LOSE";
+                    p2Text.text = "Player 2: YOU WIN";
+                }
+            }
+        }
+
+            // determine winner/tie
+
+        if (totalScore >= 16)
+        {
+            //TODO
+            // END GAME
+            if (p1score == 8 && p2score == 8)
+            {
+                //TODO
+                //settle tie
+                p1Text.text = "Player 1: TIE GAME";
+                p2Text.text = "Player 2: TIE GAME"; 
+            }
+            else
+            {
+                if (p1score > p2score)
+                {
+                    p1Text.text = "Player 1: YOU WIN";
+                    p2Text.text = "Player 2: YOU LOSE";  
+                }
+                else
+                {
+                    p1Text.text = "Player 1: YOU LOSE";
+                    p2Text.text = "Player 2: YOU WIN";
+                }
+            }
+        }
+
+
+	}
+
+	// this increments lastPlayerId and adds an entry in the scoreboard array
+	// this is called from a Command by the player, so it runs as server
+	public void AddNewPlayer()
     {
         lastPlayerId++;
         players.Add(0);
@@ -47,4 +133,6 @@ public class GameState : NetworkBehaviour
         }
         print("player 1 score: " + p1score);
     }
+
+   
 }

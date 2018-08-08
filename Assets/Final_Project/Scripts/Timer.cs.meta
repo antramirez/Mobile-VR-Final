@@ -3,7 +3,11 @@ guid: e2c04bf9f69c14763908fa046feee908
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - timerText: {fileID: 114691149836317368, guid: fe1f2cb3d529243308677940ffbfdbef,
+      type: 2}
+  - gsState: {fileID: 114652410320990788, guid: 4b2f0acde1fec436ebf47c1a1192b0f2,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
