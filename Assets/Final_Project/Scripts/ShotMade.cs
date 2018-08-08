@@ -37,16 +37,16 @@ public class ShotMade : NetworkBehaviour
         {
             if (isServer)
             {
-                print("SERVER");
+                //print("SERVER");
                 crowd = Instantiate(noise);
                 Destroy(crowd, 2);
                 explode = Instantiate(explosion);
                 explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
-              //    Destroy(ball);
+                Destroy(col.gameObject);
                 Destroy(explode, 2);
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                 Destroy(col.transform.parent.gameObject, 3);
-                print("player id that just shot: " + pid);
+                //print("player id that just shot: " + pid);
                 gs.UpdateScore(pid);
             }
 
@@ -60,11 +60,12 @@ public class ShotMade : NetworkBehaviour
             //}
             else
             {
-                print("what am i?");  
+                //print("what am i?");  
                 crowd = Instantiate(noise);
                 Destroy(crowd, 2);
                 explode = Instantiate(explosion);
                 explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
+                Destroy(col.gameObject);
                 Destroy(explode, 2);
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                 Destroy(col.transform.parent.gameObject, 3);
