@@ -58,6 +58,14 @@ public class ShotMade : NetworkBehaviour
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                 Destroy(col.transform.parent.gameObject, 3);
             }
+            else
+            {
+                print("what am i?");  
+                crowd = Instantiate(noise);
+                Destroy(crowd, 2);
+                col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+                Destroy(col.transform.parent.gameObject, 3);
+            }
         }
     }
 }
