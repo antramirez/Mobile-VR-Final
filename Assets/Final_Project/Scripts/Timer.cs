@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 
 public class Timer : NetworkBehaviour 
 {
+    /*
     public Text timerText;
     private bool gameOver = false;
     public float time = 90.1f;
@@ -34,11 +35,11 @@ public class Timer : NetworkBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        if (gsState.lastPlayerId == 2 && count == 0)
-        {
-            count++;
-            InvokeRepeating("CountDown", .3f, .1f);
-        }
+        //if (gsState.lastPlayerId == 2 && count == 0)
+        //{
+        //    count++;
+        //    InvokeRepeating("CountDown", .3f, .1f);
+        //}
 	}
 
     public void CountDown()
@@ -69,4 +70,5 @@ public class Timer : NetworkBehaviour
         timerText.color = Color.red;
         timerText.text = "Game Over";
     }
+    */
 }

@@ -23,7 +23,10 @@ public class GameState : NetworkBehaviour
     //[SyncVar]
     public Text p2Text;
   
-    public Timer t;
+    public Text timerText;
+    public float time = 90.1f;
+    int count;
+    string sec;
 
     public bool gameover = false;
 
@@ -41,20 +44,27 @@ public class GameState : NetworkBehaviour
         GameObject temp = GameObject.Find("Timer");
         if (temp == null)
         {
-            t = temp.GetComponent<Timer>();
-            t.time = 90.1f;
-            print("starting time: " + t.time);
+            timerText.text = "Time Left";
+            timerText.color = Color.white;
+            time = 90.1f;
+            print("starting time: " + time);
         }
 	}
 	public void Update()
 	{
-        print("updating time... : " + t.time);
+        if (lastPlayerId == 2 && count == 0)
+        {
+            count++;
+            InvokeRepeating("CountDown", .3f, .1f);
+        }
+
+        print("updating time... : " + time);
         totalScore = p1score + p2score;
         p1Text.text = "Player 1: " + p1score.ToString();
         p2Text.text = "Player 2: " + p2score.ToString();
 
         // check if timer is up
-        if (t.time <= .1f)
+        if (time <= .1f)
         {
             //TODO
             // END GAME
@@ -137,5 +147,34 @@ public class GameState : NetworkBehaviour
         print("player 1 score: " + p1score);
     }
 
+
+    public void CountDown()
+    {
+        if (time <= .1f)
+        {
+            Finish();
+        }
+        if (gameover)
+        {
+            return;
+        }
+        time = time - .1f;
+        if (time > 10f)
+        {
+            sec = (time % 91).ToString("f0");
+        }
+        else
+        {
+            sec = (time % 91).ToString("f1");
+        }
+        timerText.text = sec;
+    }
+
+    public void Finish()
+    {
+        gameover = true;
+        timerText.color = Color.red;
+        timerText.text = "Game Over";
+    }
    
 }

@@ -90,4 +90,7 @@ MonoBehaviour:
   totalScore: 0
   p1Text: {fileID: 0}
   p2Text: {fileID: 0}
-  t: {fileID: 114049664532191470, guid: ca55de9907d33491cae1468293a1483d, type: 2}
+  timerText: {fileID: 114691149836317368, guid: fe1f2cb3d529243308677940ffbfdbef,
+    type: 2}
+  time: 90.1
+  gameover: 0
