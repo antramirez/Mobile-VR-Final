@@ -25,6 +25,8 @@ public class GameState : NetworkBehaviour
   
     public Timer t;
 
+    public bool gameover = false;
+
     public override void OnStartServer()
     {
         base.OnStartServer();
@@ -41,11 +43,12 @@ public class GameState : NetworkBehaviour
         {
             t = temp.GetComponent<Timer>();
             t.time = 90.1f;
+            print("starting time: " + t.time);
         }
-        print("the time is " + t.time);
 	}
 	public void Update()
 	{
+        print("updating time... : " + t.time);
         totalScore = p1score + p2score;
         p1Text.text = "Player 1: " + p1score.ToString();
         p2Text.text = "Player 2: " + p2score.ToString();
