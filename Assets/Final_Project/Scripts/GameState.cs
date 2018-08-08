@@ -68,7 +68,7 @@ public class GameState : NetworkBehaviour
         {
             //TODO
             // END GAME
-            if (p1score == p2score)
+            if (p1score == 8 && p2score == 8)
             {
                 //TODO
                 //settle tie
