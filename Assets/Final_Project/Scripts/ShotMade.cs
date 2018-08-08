@@ -43,6 +43,7 @@ public class ShotMade : NetworkBehaviour
                 explode = Instantiate(explosion);
                 explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
                 Destroy(col.gameObject);
+                Destroy(ball);
                 Destroy(explode, 2);
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                 Destroy(col.transform.parent.gameObject, 3);
@@ -66,6 +67,7 @@ public class ShotMade : NetworkBehaviour
                 explode = Instantiate(explosion);
                 explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
                 Destroy(col.gameObject);
+                Destroy(ball);
                 Destroy(explode, 2);
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                 Destroy(col.transform.parent.gameObject, 3);
