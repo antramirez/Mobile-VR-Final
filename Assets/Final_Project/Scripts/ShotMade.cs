@@ -33,38 +33,29 @@ public class ShotMade : NetworkBehaviour
     public void OnCollisionEnter(Collision col)
     {
         
-            if (col.gameObject.name == "BallCollider")
+        if (col.gameObject.name == "BallCollider")
+        {
+            if (isServer)
             {
-                if (isServer)
-                {
-                    crowd = Instantiate(noise);
-                    Destroy(crowd, 2);
-                    explode = Instantiate(explosion);
-                    explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
-                    //  Destroy(ball);
-                    Destroy(explode, 2);
-                    //col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
-                    //Destroy(col.transform.parent.gameObject, 3);
-                    DestroyBasket(col.transform.parent.gameObject.transform.GetChild(0));
-                    print("player id that just shot: " + pid);
-                    gs.UpdateScore(pid);
-                }
-
-                if (isLocalPlayer)
-                {
-                    crowd = Instantiate(noise);
-                    Destroy(crowd, 2);
-                    DestroyBasket(col.transform.parent.gameObject.transform.GetChild(0));
-                }
+                crowd = Instantiate(noise);
+                Destroy(crowd, 2);
+                explode = Instantiate(explosion);
+                explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
+              //    Destroy(ball);
+                Destroy(explode, 2);
+                col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+                Destroy(col.transform.parent.gameObject, 3);
+                print("player id that just shot: " + pid);
+                gs.UpdateScore(pid);
             }
-        
 
-    }
-
-    [ClientRpc]
-    public void DestroyBasket(Transform obj)
-    {
-        obj.GetComponent<Renderer>().material.color = Color.red;
-        Destroy(obj, 3);
+            if (isLocalPlayer)
+            {
+                crowd = Instantiate(noise);
+                Destroy(crowd, 2);
+                col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+                Destroy(col.transform.parent.gameObject, 3);
+            }
+        }
     }
 }
