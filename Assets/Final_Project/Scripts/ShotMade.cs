@@ -32,8 +32,8 @@ public class ShotMade : NetworkBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        if (isServer)
-        {
+        //if (isServer)
+        //{
             if (col.gameObject.name == "BallCollider")
             {
                 crowd = Instantiate(noise);
@@ -47,6 +47,6 @@ public class ShotMade : NetworkBehaviour
                 print("player id that just shot: " + pid);
                 gs.UpdateScore(pid);
             }   
-        }
+        //}
     }
 }
