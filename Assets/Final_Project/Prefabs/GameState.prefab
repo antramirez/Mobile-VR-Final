@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097bc90186dea4662895ef640e539c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastPlayerId: 1
+  lastPlayerId: 0
   p1score: 0
   p2score: 0
   totalScore: 0
