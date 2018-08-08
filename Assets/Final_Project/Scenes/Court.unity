@@ -1635,7 +1635,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 24
+  m_Text: Time Left
 --- !u!222 &766397456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3813,7 +3813,7 @@ MonoBehaviour:
   m_OnlineScene: 
   m_SpawnPrefabs:
   - {fileID: 1309095814981100, guid: ff920d46bb1c8446c9e579f4c44038b7, type: 2}
-  - {fileID: 1720208542169790, guid: fe1f2cb3d529243308677940ffbfdbef, type: 2}
+  - {fileID: 1587217132976880, guid: 77a6ff1d9880842bd879d843416dae1e, type: 2}
   m_CustomConfig: 1
   m_MaxConnections: 4
   m_ConnectionConfig:
