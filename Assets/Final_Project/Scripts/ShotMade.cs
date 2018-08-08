@@ -37,6 +37,7 @@ public class ShotMade : NetworkBehaviour
         {
             if (isServer)
             {
+                print("SERVER");
                 crowd = Instantiate(noise);
                 Destroy(crowd, 2);
                 explode = Instantiate(explosion);
@@ -51,6 +52,7 @@ public class ShotMade : NetworkBehaviour
 
             if (isLocalPlayer)
             {
+                print("LOCAL");
                 crowd = Instantiate(noise);
                 Destroy(crowd, 2);
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
