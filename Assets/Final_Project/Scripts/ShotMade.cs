@@ -63,6 +63,7 @@ public class ShotMade : NetworkBehaviour
                 print("what am i?");  
                 crowd = Instantiate(noise);
                 Destroy(crowd, 2);
+                explode = Instantiate(explosion);
                 explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
                 Destroy(explode, 2);
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
