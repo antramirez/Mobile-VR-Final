@@ -84,13 +84,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097bc90186dea4662895ef640e539c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastPlayerId: 0
+  lastPlayerId: 1
   p1score: 0
   p2score: 0
   totalScore: 0
   p1Text: {fileID: 0}
   p2Text: {fileID: 0}
-  timerText: {fileID: 114691149836317368, guid: fe1f2cb3d529243308677940ffbfdbef,
+  timerText: {fileID: 114799196177110438, guid: 77a6ff1d9880842bd879d843416dae1e,
     type: 2}
   time: 90.1
   gameover: 0
