@@ -50,19 +50,21 @@ public class ShotMade : NetworkBehaviour
                 gs.UpdateScore(pid);
             }
 
-            if (isLocalPlayer)
-            {
-                print("LOCAL");
-                crowd = Instantiate(noise);
-                Destroy(crowd, 2);
-                col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
-                Destroy(col.transform.parent.gameObject, 3);
-            }
+            //if (isLocalPlayer)
+            //{
+            //    print("LOCAL");
+            //    crowd = Instantiate(noise);
+            //    Destroy(crowd, 2);
+            //    col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
+            //    Destroy(col.transform.parent.gameObject, 3);
+            //}
             else
             {
                 print("what am i?");  
                 crowd = Instantiate(noise);
                 Destroy(crowd, 2);
+                explode.transform.position = new Vector3(col.transform.position.x, col.transform.position.y + .275f, col.transform.position.z + .5f);
+                Destroy(explode, 2);
                 col.transform.parent.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                 Destroy(col.transform.parent.gameObject, 3);
             }
