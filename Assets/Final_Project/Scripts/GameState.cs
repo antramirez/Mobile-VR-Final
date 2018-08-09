@@ -203,7 +203,7 @@ public class GameState : NetworkBehaviour
                     }
                 }
                 // tiebreaker based on better shooting percentage
-                else if ((float)(p1score / p1shots) > (float)(p2score / p2shots))
+                else if (p1shots < p2shots)
                 {
                     p1Text.text = "Player 1: YOU WIN";
                     p2Text.text = "Player 2: YOU LOSE";
@@ -217,7 +217,7 @@ public class GameState : NetworkBehaviour
                 else
                 {
                     // tiebreaker based on better shooting percentage
-                    if ((float)(p1score / p1shots) < (float)(p2score / p2shots))
+                    if (p1shots > p2shots)
                     {
                         p1Text.text = "Player 1: YOU LOSE";
                         p2Text.text = "Player 2: YOU WIN";
@@ -274,11 +274,13 @@ public class GameState : NetworkBehaviour
         // check if all the baskets were made and if there is a winner or if there is a tie
         if (totalScore >= 16)
         {
+            // end game when baskets are made
+            Finish();
             // tie
             if (p1score == 8 && p2score == 8)
             {
                 // tiebreaker based on better shooting percentage
-                if ((float)(p1score / p1shots) > (float)(p2score / p2shots))
+                if (p1shots < p2shots)
                 {
                     p1Text.text = "Player 1: YOU WIN";
                     p2Text.text = "Player 2: YOU LOSE";
@@ -292,7 +294,7 @@ public class GameState : NetworkBehaviour
                 else
                 {
                     // tiebreaker based on better shooting percentage
-                    if ((float)(p1score / p1shots) < (float)(p2score / p2shots))
+                    if (p1shots > p2shots)
                     {
                         p1Text.text = "Player 1: YOU LOSE";
                         p2Text.text = "Player 2: YOU WIN";

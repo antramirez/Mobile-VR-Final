@@ -1,6 +1,6 @@
-OSXStandalone
+iOS
 PlayerPath?
-/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/builds/assignment3/final_v3.app
+/Users/davidkrauskopf-greene/Documents/NYU Summer 2018/builds/assignment3/final_project2
 SceneListBegin?
 Assets/Final_Project/Scenes/Court.unity
 SceneListEnd?
